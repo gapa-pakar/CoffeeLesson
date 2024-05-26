@@ -1,0 +1,227 @@
+
+@font-face {
+    font-family: RubikDoodleShadow-Regular;
+    src: url("assets/fonts/RubikDoodleShadow-Regular.ttf");
+}
+
+@font-face {
+    font-family: Shuneet3-Bold-Regular;
+    src: url("assets/fonts/Shuneet3-Bold-Regular.ttf");
+}
+
+@font-face {
+    font-family: Petel-Bold;
+    src: url("assets/fonts/Petel-Bold.ttf");
+}
+
+body {
+    background-color: #fff5e1;  
+    overflow: hidden;
+    font-family: Shuneet3-Bold-Regular;
+    color: #3b220e;
+    direction: rtl;
+    font-size: calc(1vh + 1vw + 4px);
+}
+
+.arrows {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    margin: 0rem 2.4rem;
+    visibility: hidden;
+    cursor: pointer;
+    bottom: -4rem;
+}
+
+.arrow {
+    width: 5rem;
+    position: relative;
+    bottom: 12rem;
+}
+
+/* start-page */
+.page0 {
+    background-image: url("assets/media/startPage/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    /* display: none; */
+}
+
+.start-page-graphic {
+    position: absolute;
+    right: -5rem;
+    top: -5rem;
+}
+
+.title {
+    font-size: 12rem;
+    text-align: center;
+    position: relative;
+    top: 14rem;
+    font-family: Petel-Bold;
+    color: #471e0d;
+}
+
+.start-button {
+    color: #471e0d;
+    background-color: bisque;
+    border: 5px solid #552f1e;
+    width: 17rem;
+    height: 5rem;
+    font-size: 2rem;
+    font-family: Shuneet3-Bold-Regular;
+    border-radius: 10rem;
+    position: absolute;
+    right: 50rem;
+    top: 30rem;
+}
+
+.start-button:hover {
+    background-color: #471e0d;
+    border: 5px solid bisque;
+    color: bisque;
+    cursor: pointer;
+}
+
+.icon {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 5rem;
+}
+
+/* background-page */
+.page1 {
+    background-image: url("assets/media/backgroundPage/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+.headline1 {
+    font-family: RubikDoodleShadow-Regular;
+    position: relative;
+    top: 2rem;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 900;
+}
+
+.background-graphic {
+    position: absolute;
+    top: 10rem;
+    right: 20rem;
+}
+
+.content-page1 .content-page2 {
+    font-size: 1.8rem;
+}
+      
+#title1 {
+    position: absolute;
+    top: 14rem;
+    right: 34rem;
+    width: 30rem;
+    text-align: center;
+}
+
+#title2 {
+    position: absolute;
+    top: 20rem;
+    right: 46rem;
+}
+
+#title3 {
+    position: absolute;
+    top: 36rem;
+    right: 36rem;
+}
+
+#title4 {
+    position: absolute;
+    top: 42rem;
+    right: 59rem;
+    width: 26rem;
+    text-align: center;
+}
+
+.page2 {
+    background-image: url("assets/media/backgroundPage/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+#title5 {
+    position: absolute;
+    right: 20rem;
+    top: 14rem;
+    width: 70rem;
+    line-height: 1.5;
+}
+
+/* #title6 {
+    position: absolute;
+    right: 20rem;
+    top: 17rem;
+} */
+
+#title6 {
+    position: absolute;
+    top: 26rem;
+    right: 20rem;
+    width: 30rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.world-graphic {
+    position: absolute;
+    top: 25rem;
+    right: 64rem;
+}
+
+.page3 {
+    background-image: url("assets/media/historyPage/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+.icon-page3 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: max-content;
+    position: relative;
+    right: 20rem;
+    top: 7rem;
+    /* padding-bottom: 2rem; */
+}
+
+.content-page3 {
+    /* display: flex; */
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: max-content;
+    position: absolute;
+    right: 34rem;
+    top: 12.8rem;
+}
+
+.content3 {
+    margin-bottom: 8rem;
+}
+
+.boldLetters {
+    font-weight: 900;
+    font-size: 2.7rem;
+}
