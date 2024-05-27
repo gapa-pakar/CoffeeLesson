@@ -40,19 +40,35 @@ let page3Contentall = [
       "title14": "במהרה הפכו ברזיל וקולומביה למעצמות קפה עולמיות",
     }]
 
+let page4Content = ["האגדה הנפוצה ביותר על גילוי הקפה מתרחשת בשנת 800 לפני הספירה ומספרת על רועה עיזים אתיופי בשם חאלדי.\n\n\n\n\n\n\n\n\n העיזים של חאלדי בדרך כלל רגועות ונינוחות.\n יום אחד, חאלדי הבחין שכשהעיזים שלו אוכלות מגרגירי יער אדומים של שיח מסוים, הן הופכות לאנרגטיות וחסרות מנוחה.", ".חאלדי ניסה בעצמו לאכול את הגרגירים הללו, וכאשר טעם מהם הרגיש את ההשפעה בעצמו. נרגש מהתגלית המוזרה, הוא הביא כמה גרגירים לנזיר בכפר שלו והסביר לו את שהתרחש. הנזיר קבע כי הגרגירים הם ״עבודת השטן״ והשליך אותם לאש הסמוכה. כך למעשה התרחשה קליית הקפה הראשונה", "זמן קצר לאחר מכן, עלתה ארומה עוצמתית מן האש ומלאה את החדר בו נכחו חאלדי והנזיר. על מנת לשמר את הארומה, הנזיר הורה להוציא את הגרגירים מן האש ולשפוך עליהם מים, וכך נוצרה כוס הקפה הראשונה."]
+
 let idArrayPage1 = ["1", "2", "3", "4"]
+let si;
+let z;
+let right;
+let page;
+let addNext;
 
 window.addEventListener("load", () => {
     pageCount = 0;
     nextPageCount = 0;
     // document.getElementById("start-button").addEventListener("click", page1);
     document.addEventListener("click", changePages);
+    console.log(pageCount);
+
+    // book variables
+    right = document.getElementsByClassName("right");
+    si = right.length;
+    z=1;
+    page = 0;
+    add = 0;
 });
 
 var page1 = () => {
     console.log("g")
     idArrayPage1 = ["1", "2", "3", "4"]
     document.getElementById("arrows").style.visibility = "visible";
+    console.log("g")
     addContent(page1Content);
 }
 
@@ -74,8 +90,72 @@ var page3 = () => {
 }
 
 var page4 = () => {
+    // turnRight();
+    // turnLeft();
+    idArrayPage1 = ["9", "10", "11"]
+    if (page !== 3 && add === 0) {
+        document.getElementById("next-page").style.visibility = "hidden";
+    } else {
+        document.getElementById("next-page").style.visibility = "visible";
+        add = 1;
+    }
     
+    // addContent(page4Content)
+    for (let i = 1; i <=3; i++) {
+        document.getElementById(`title${idArrayPage1[i - 1]}`).innerText = page4Content[i - 1];
+    }
+    if (page !== 0) {
+        document.getElementById("previous").style.display = "block";
+    } else {
+        document.getElementById("previous").style.display = "none";
+    }
+    
+    if (page !== 3) {
+        document.getElementById("next").style.display = "block";
+    } else {
+        document.getElementById("next").style.display = "none";
+    }
+
 }
+
+function turnRight()
+    {
+       
+        if(si>=1){
+            si--;
+        }
+        else{
+            si=right.length-1;
+            function sttmot(i){
+                setTimeout(function(){right[i].style.zIndex="auto";},300);
+            }
+            for(var i=0;i<right.length;i++){
+                right[i].className="right";
+                sttmot(i);
+                z=1;
+            }
+        }
+        right[si].classList.add("flip");
+        z++;
+        right[si].style.zIndex=z;
+        page++;
+    }
+    function turnLeft()
+    {
+        if(si<right.length){
+            si++;
+        }
+        else{
+            si=1;
+            for(var i=right.length-1;i>0;i--){
+                right[i].classList.add("flip");
+                right[i].style.zIndex=right.length+1-i;
+            }
+        }
+        right[si-1].className="right";
+        setTimeout(function(){right[si-1].style.zIndex="auto";},350);
+        page--;
+    }
 
 let changePages = (event) => {
     document.getElementById(`page${pageCount}`).style.display = "none";

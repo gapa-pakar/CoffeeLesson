@@ -21,6 +21,7 @@ body {
     color: #3b220e;
     direction: rtl;
     font-size: calc(1vh + 1vw + 4px);
+    z-index: 1;
 }
 
 .arrows {
@@ -31,13 +32,13 @@ body {
     margin: 0rem 2.4rem;
     visibility: hidden;
     cursor: pointer;
-    bottom: -4rem;
+    bottom: 10rem;
 }
 
 .arrow {
     width: 5rem;
     position: relative;
-    bottom: 12rem;
+    bottom: -2rem;
 }
 
 /* start-page */
@@ -224,4 +225,39 @@ body {
 .boldLetters {
     font-weight: 900;
     font-size: 2.7rem;
+}
+
+.page4 {
+    background-image: url("assets/media/startPage/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    /* z-index: -1 */
+}
+
+#title9, #title10, #title11 {
+    position: relative;
+    top: 5.4rem;
+    font-size: 1.4rem;
+    margin-right: 4rem;
+    margin-left: 4rem;
+    text-align: right;
+}
+
+.sheep {
+    width: 9rem;
+    position: relative;
+    top: -10rem;
+    right: -4rem;
+}
+
+.page5 {
+    background-image: url("assets/media/startPage/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: none;
 }
