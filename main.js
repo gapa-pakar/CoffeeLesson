@@ -42,12 +42,19 @@ let page3Contentall = [
 
 let page4Content = ["האגדה הנפוצה ביותר על גילוי הקפה מתרחשת בשנת 800 לפני הספירה ומספרת על רועה עיזים אתיופי בשם חאלדי.\n\n\n\n\n\n\n\n\n העיזים של חאלדי בדרך כלל רגועות ונינוחות.\n יום אחד, חאלדי הבחין שכשהעיזים שלו אוכלות מגרגירי יער אדומים של שיח מסוים, הן הופכות לאנרגטיות וחסרות מנוחה.", ".חאלדי ניסה בעצמו לאכול את הגרגירים הללו, וכאשר טעם מהם הרגיש את ההשפעה בעצמו. נרגש מהתגלית המוזרה, הוא הביא כמה גרגירים לנזיר בכפר שלו והסביר לו את שהתרחש. הנזיר קבע כי הגרגירים הם ״עבודת השטן״ והשליך אותם לאש הסמוכה. כך למעשה התרחשה קליית הקפה הראשונה", "זמן קצר לאחר מכן, עלתה ארומה עוצמתית מן האש ומלאה את החדר בו נכחו חאלדי והנזיר. על מנת לשמר את הארומה, הנזיר הורה להוציא את הגרגירים מן האש ולשפוך עליהם מים, וכך נוצרה כוס הקפה הראשונה."]
 
+let page6Content = ["התפשטות הקפה בעולם מתחילה מאתיופיה", "האתיופים מתחילים למכור את פולי הקפה לסוחרים ערביים שמפיצים את הפולים במדינות ערב של העולם העתיק.", "בתימן עודדו שתיית קפה מרובה על מנת לצמצם את תופעת לעיסת הגת.", "בארצות ערב חכמי הדת ניסו למנוע תחילה מהמאמינים לשתות קפה, אך ללא הצלחה.", "בתי הקפה הראשונים בעולם הוקמו במכה. המשקה התפשט ברחבי מדינות ערב אך היה מוכר במיוחד במקומות בהם היו נהוגים משחקי קוביות, רכילויות, ריקודים ושירה.", "בשלב מסוים בתי הקפה נהפכו במהרה למרכזים פוליטיים פעילים נגד הממשל ובשל כך חלק מהם הוצאו אל מחוץ לחוק.", "למדינות ערב הייתה מדיניות חד משמעית- איסור ייצוא פולי קפה בכדי שהקפה לא יגדל בשום מקום אחר בעולם ויישאר בלעדי לאזורם.", "צעד זה יצר כמיהה למשקה ופתח במרוץ להשגת זרעים.", "הסברה היא שאיטליה היא הארץ האירופאית הראשונה שהצליחה להשיג פולי קפה, כנראה על ידי סוחרים ונציאנים שביקרו במזרח התיכון.", "מאוחר יותר, במאה ה-16 וה-17, גם הולנד וצרפת הצליחו להשיג אותו.", "במאה ה-18 פולי הקפה הגיעו גם לאמריקה, כאשר סוחר צרפתי הביא עימו כמה שתילים לאחד מהאיים הקריביים.", "באדמה הפוריה ובאקלים הטרופי הצמחים התפתחו ושגשגו היטב, ותוך שנים אחדות השתילים הבודדים הפכו למטעים רחבים.", "כובשי אמריקה האירופאים הביאו עימם זרעים של צמח הקפה לאזורים שונים בדרום אמריקה, וכך הם החלו את חקלאות הקפה.", "במהרה הפכו ברזיל וקולומביה למעצמות קפה עולמיות"]
+
+// book page variables
 let idArrayPage1 = ["1", "2", "3", "4"]
 let si;
 let z;
 let right;
 let page;
 let addNext;
+
+// scroll page variables
+var items;
+let cardsClass; 
 
 window.addEventListener("load", () => {
     pageCount = 0;
@@ -118,6 +125,77 @@ var page4 = () => {
 
 }
 
+var page5 = () => {
+    console.log("g");
+}
+
+var page6 = () => {
+    for (let i = 0; i < 14; i++) {
+       
+        if (cardsClass === undefined || cardsClass === "side-left") {
+            cardsClass = "side-right"
+        } else {
+            cardsClass = "side-left"
+        }
+        // let time = document.createElement("time");
+        // time.innerText = objects[0].time;
+        // let div = document.createElement("div");
+        // div.classList.add("discovery");
+        // document.getElementById(`${i + 1}`).classList.add(`${cardsClass}`);
+        let listItem = document.createElement("li");
+        document.getElementById("item").appendChild(listItem);
+        let div = document.createElement("div");
+        div.setAttribute("id", `${i + 1}`);
+        listItem.appendChild(div);
+        let icon = document.createElement("img");
+        icon.setAttribute("src", `assets/media/historyPage/icons/${i + 1}.png`)
+        icon.classList.add("icon1");
+        let h1 = document.createElement("h1");
+        h1.innerText = page6Content[i];
+        let p = document.createElement("p");
+        document.getElementById(`${i + 1}`).classList.add(`${cardsClass}`);
+        document.getElementById(`${i + 1}`).append(h1, p, icon);
+        // p.innerText = objects[0].p;
+        // div.append(h1, p);
+    }
+
+    console.log(document.getElementById("scroll"))
+
+    items = document.querySelectorAll(".timeline li");
+    window.addEventListener("scroll", callbackFunc);
+    callbackFunc();
+}
+
+// scroll page functions
+function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+function callbackFunc() {
+    console.log("hello")
+    for (var i = 0; i < items.length; i++) {
+        console.log("entered for condition")
+      if (isElementInViewport(items[i])) {
+        console.log("entered first if condition")
+        if(!items[i].classList.contains("in-view")){
+            console.log("entered second if condition")
+          items[i].classList.add("in-view");
+        }
+      } else if(items[i].classList.contains("in-view")) {
+        console.log("entered else if condition")
+          items[i].classList.remove("in-view");
+      }
+    }
+}
+
+
+//book page functions
 function turnRight()
     {
        

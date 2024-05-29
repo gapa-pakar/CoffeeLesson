@@ -9,7 +9,7 @@
     src: url("assets/fonts/Shuneet3-Bold-Regular.ttf");
     direction: rtl;
 }
-*{
+.page4{
     box-sizing: border-box;
     font-family: Shuneet3-Bold-Regular;
 }

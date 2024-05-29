@@ -16,7 +16,7 @@
 
 body {
     background-color: #fff5e1;  
-    overflow: hidden;
+    /* overflow: hidden; */
     font-family: Shuneet3-Bold-Regular;
     color: #3b220e;
     direction: rtl;
@@ -259,5 +259,13 @@ body {
     background-size: cover;
     width: 100vw;
     height: 100vh;
+    display: none;
+}
+
+.page6 {
+    display: none;
+}
+
+.page7 {
     display: none;
 }
