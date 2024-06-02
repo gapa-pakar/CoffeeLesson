@@ -44,6 +44,66 @@ let page4Content = ["האגדה הנפוצה ביותר על גילוי הקפה
 
 let page6Content = ["התפשטות הקפה בעולם מתחילה מאתיופיה", "האתיופים מתחילים למכור את פולי הקפה לסוחרים ערביים שמפיצים את הפולים במדינות ערב של העולם העתיק.", "בתימן עודדו שתיית קפה מרובה על מנת לצמצם את תופעת לעיסת הגת.", "בארצות ערב חכמי הדת ניסו למנוע תחילה מהמאמינים לשתות קפה, אך ללא הצלחה.", "בתי הקפה הראשונים בעולם הוקמו במכה. המשקה התפשט ברחבי מדינות ערב אך היה מוכר במיוחד במקומות בהם היו נהוגים משחקי קוביות, רכילויות, ריקודים ושירה.", "בשלב מסוים בתי הקפה נהפכו במהרה למרכזים פוליטיים פעילים נגד הממשל ובשל כך חלק מהם הוצאו אל מחוץ לחוק.", "למדינות ערב הייתה מדיניות חד משמעית- איסור ייצוא פולי קפה בכדי שהקפה לא יגדל בשום מקום אחר בעולם ויישאר בלעדי לאזורם.", "צעד זה יצר כמיהה למשקה ופתח במרוץ להשגת זרעים.", "הסברה היא שאיטליה היא הארץ האירופאית הראשונה שהצליחה להשיג פולי קפה, כנראה על ידי סוחרים ונציאנים שביקרו במזרח התיכון.", "מאוחר יותר, במאה ה-16 וה-17, גם הולנד וצרפת הצליחו להשיג אותו.", "במאה ה-18 פולי הקפה הגיעו גם לאמריקה, כאשר סוחר צרפתי הביא עימו כמה שתילים לאחד מהאיים הקריביים.", "באדמה הפוריה ובאקלים הטרופי הצמחים התפתחו ושגשגו היטב, ותוך שנים אחדות השתילים הבודדים הפכו למטעים רחבים.", "כובשי אמריקה האירופאים הביאו עימם זרעים של צמח הקפה לאזורים שונים בדרום אמריקה, וכך הם החלו את חקלאות הקפה.", "במהרה הפכו ברזיל וקולומביה למעצמות קפה עולמיות"]
 
+const quizData = [
+    {
+      question: "מאיפה הקפה במקור?",
+      a: "איטליה",
+      b: "אתיופיה",
+      c: "מרוקו",
+      d: "ברזיל",
+      correct: "b"
+    },
+    {
+      question: "איפה הוקמו בתי הקפה הראשונים?",
+      a: "מכה",
+      b: "מילאנו",
+      c: "תימן",
+      d: "ברזיל",
+      correct: "a"
+    },
+    {
+      question: "כמה כוסות קפה נלגמות בכל יום בארה״ב?",
+      a: "350,000,000",
+      b: "850,000,000",
+      c: "300,500",
+      d: "500,000,000",
+      correct: "a"
+    },
+    {
+      question: "לאיזו מדינה באמריקה הביאו ראשונה את הקפה?",
+      a: "ברזיל",
+      b: "קולומביה",
+      c: "האיים הקריביים",
+      d: "ניו יורק",
+      correct: "c"
+    },
+    {
+        question: "למה באירופה היתה כמיהה גדולה לקפה לפני המאה ה-16?",
+        a: "מכיוון שהאירופאים העשירים שביקרו בארצות ערב הפיצו את השמועה על המשקה המסקרן",
+        b: "מדינות ערב הטילו איסור על ייצוא פולי קפה על מנת לשמור את המשקה ייחודי להן",
+        c: "באירופה היה אסור לשתות קפה עד המאה ה-18",
+        d: "כל התשובות נכונות",
+        correct: "b"
+    }
+];
+
+let page8Content = ["ישנם זנים רבים של קפה, אולם בעיקר שניים משמשים למשקאות קפה:", "ואילו השאר משמשים בעיקר לתעשיות הקוסמטיקה."]
+
+// 
+let quiz;
+let answerEls;
+let questionEl;
+let a_text;
+let b_text;
+let c_text;
+let d_text;
+let submitBtn;
+let loadingProgress;
+let answer12;
+
+let currentQuiz = 0;
+let score = 0;
+
 // book page variables
 let idArrayPage1 = ["1", "2", "3", "4"]
 let si;
@@ -54,14 +114,17 @@ let addNext;
 
 // scroll page variables
 var items;
-let cardsClass; 
+let cardsClass;
+let once = 0;
 
 window.addEventListener("load", () => {
     pageCount = 0;
     nextPageCount = 0;
+    document.getElementById("arrows").style.visibility = "hidden";
     // document.getElementById("start-button").addEventListener("click", page1);
+    // console.log(event.target)
     document.addEventListener("click", changePages);
-    console.log(pageCount);
+    //console.log(pageCount);
 
     // book variables
     right = document.getElementsByClassName("right");
@@ -72,10 +135,10 @@ window.addEventListener("load", () => {
 });
 
 var page1 = () => {
-    console.log("g")
+    //console.log("g")
     idArrayPage1 = ["1", "2", "3", "4"]
     document.getElementById("arrows").style.visibility = "visible";
-    console.log("g")
+    //console.log("g")
     addContent(page1Content);
 }
 
@@ -91,7 +154,7 @@ var page3 = () => {
         document.getElementById("icon-page3").appendChild(icon);
         icon.setAttribute("src", `assets/media/historyPage/icon${i}.png`);
         icon.setAttribute("style", `padding-bottom: 4rem;`)
-        console.log(document.getElementById("icon-page3"))
+        //console.log(document.getElementById("icon-page3"))
     }
     // addContent(page3Content);
 }
@@ -100,12 +163,7 @@ var page4 = () => {
     // turnRight();
     // turnLeft();
     idArrayPage1 = ["9", "10", "11"]
-    if (page !== 3 && add === 0) {
-        document.getElementById("next-page").style.visibility = "hidden";
-    } else {
-        document.getElementById("next-page").style.visibility = "visible";
-        add = 1;
-    }
+   
     
     // addContent(page4Content)
     for (let i = 1; i <=3; i++) {
@@ -126,44 +184,143 @@ var page4 = () => {
 }
 
 var page5 = () => {
+    window.scrollTo(0,0); 
+    document.body.style.overflow = "hidden";
     console.log("g");
 }
 
 var page6 = () => {
-    for (let i = 0; i < 14; i++) {
-       
-        if (cardsClass === undefined || cardsClass === "side-left") {
-            cardsClass = "side-right"
-        } else {
-            cardsClass = "side-left"
-        }
-        // let time = document.createElement("time");
-        // time.innerText = objects[0].time;
-        // let div = document.createElement("div");
-        // div.classList.add("discovery");
-        // document.getElementById(`${i + 1}`).classList.add(`${cardsClass}`);
-        let listItem = document.createElement("li");
-        document.getElementById("item").appendChild(listItem);
-        let div = document.createElement("div");
-        div.setAttribute("id", `${i + 1}`);
-        listItem.appendChild(div);
-        let icon = document.createElement("img");
-        icon.setAttribute("src", `assets/media/historyPage/icons/${i + 1}.png`)
-        icon.classList.add("icon1");
-        let h1 = document.createElement("h1");
-        h1.innerText = page6Content[i];
-        let p = document.createElement("p");
-        document.getElementById(`${i + 1}`).classList.add(`${cardsClass}`);
-        document.getElementById(`${i + 1}`).append(h1, p, icon);
-        // p.innerText = objects[0].p;
-        // div.append(h1, p);
-    }
+    document.body.style.overflow = "visible";
 
-    console.log(document.getElementById("scroll"))
+    if (once === 0) {
+        for (let i = 0; i < 14; i++) {
+            if (cardsClass === undefined || cardsClass === "side-left") {
+                cardsClass = "side-right"
+            } else {
+                cardsClass = "side-left"
+            }
+            // let time = document.createElement("time");
+            // time.innerText = objects[0].time;
+            // let div = document.createElement("div");
+            // div.classList.add("discovery");
+            // document.getElementById(`${i + 1}`).classList.add(`${cardsClass}`);
+            let listItem = document.createElement("li");
+            document.getElementById("item").appendChild(listItem);
+            let div = document.createElement("div");
+            div.setAttribute("id", `${i + 1}`);
+            listItem.appendChild(div);
+            let icon = document.createElement("img");
+            icon.setAttribute("src", `assets/media/historyPage/icons/${i + 1}.png`)
+            icon.classList.add("icon1");
+            let h1 = document.createElement("h1");
+            h1.innerText = page6Content[i];
+            let p = document.createElement("p");
+            document.getElementById(`${i + 1}`).classList.add(`${cardsClass}`);
+            document.getElementById(`${i + 1}`).append(h1, p, icon);
+            // p.innerText = objects[0].p;
+            // div.append(h1, p);
+        }
+    }
+    
+    //console.log(document.getElementById("scroll"))
 
     items = document.querySelectorAll(".timeline li");
     window.addEventListener("scroll", callbackFunc);
     callbackFunc();
+}
+
+var page7 = () => {
+    window.scrollTo(0,0); 
+    document.body.style.overflow = "hidden";
+    quiz = document.getElementById("quiz");
+    answerEls = document.querySelectorAll(".answer");
+    // questionEl = document.getElementById("question");
+    // a_text = document.getElementById("a_text");
+    // b_text = document.getElementById("b_text");
+    // c_text = document.getElementById("c_text");
+    // d_text = document.getElementById("d_text");
+    console.log("reloading")
+    submitBtn = document.getElementById("submit");
+    loadingProgress = document.getElementById("loading-bar-progress");
+    
+    currentQuiz = 0;
+    score = 0;
+
+    // if (currentQuiz === 1) {
+    //     console.log("currentQuiz === 1")
+    //     answerEls.forEach((answerEl) => (answerEl.checked = false));
+    // }
+    // answerEls.forEach((answerEl) => (answerEl.checked = false));
+    loadQuiz();
+    console.log("loadagain")
+    
+    
+
+    submitBtn.addEventListener("click", () => {
+        
+        answerEls.forEach((answerEl) => {
+            if (answerEl.checked) {
+                submitBtn.disabled = true;
+                answer12 = answerEl.id;
+                const answer = answer12;
+
+                if (answer) {
+                    if (answer === quizData[currentQuiz].correct) {
+                        document.getElementById(`${answer}_text`).style.cssText = "border: 2px solid green; background-color: rgb(0, 128, 0, 0.4)";
+                        setTimeout(() => {
+                        document.getElementById(`${answer}_text`).style.cssText = "border: none; background-color: white;";
+                        }, 4000)
+                        score++;
+                    } 
+                    else {
+                        document.getElementById(`${answer}_text`).style.cssText = "border: 2px solid red; background-color: rgb(255, 0, 0, 0.4)";
+                        document.getElementById(`${quizData[currentQuiz].correct}_text`).style.cssText = "border: 2px solid green; background-color: rgb(0, 128, 0, 0.4)"
+                        setTimeout(() => {
+                        document.getElementById(`${answer}_text`).style.cssText = "border: none; background-color: white;";
+                        document.getElementById(`${quizData[currentQuiz].correct}_text`).style.cssText = "border: none; background-color: white;";
+                        }, 4000)
+                    }
+            
+                    setTimeout(() => {
+                        currentQuiz++;
+                        console.log(currentQuiz)
+                        console.log(quizData.length)
+                        loadingProgress.style.width = `${(currentQuiz * 100) / quizData.length}%`;
+                        if (currentQuiz < quizData.length) {
+                            console.log("if")
+                            
+                        loadQuiz();
+                        } else {
+                        quiz.innerHTML = `
+                                    <h2 class="question"> ענית נכון על  ${score}/${quizData.length} שאלות</h2>
+                    
+                                    <button onclick="loadQuiz()" id="realoding">Reload <i class="fa-solid fa-arrows-rotate"></i></button>
+                                `;
+                        }
+                        submitBtn.disabled = false;
+                    }, 4000)
+                }
+                answerEls.forEach((answerEl) => (answerEl.checked = false));
+            }
+        });
+        
+    });
+}
+
+var page8 = () => {
+    addContent(page8Content);
+}
+
+// 
+function loadQuiz() {
+    answerEls.forEach((answerEl) => (answerEl.checked = false));
+    const currentQuizData = quizData[currentQuiz];
+
+    document.getElementById("question").innerText = currentQuizData.question;
+    document.getElementById("a_text").innerText = currentQuizData.a;
+    document.getElementById("b_text").innerText = currentQuizData.b;
+    document.getElementById("c_text").innerText = currentQuizData.c;
+    document.getElementById("d_text").innerText = currentQuizData.d;
 }
 
 // scroll page functions
@@ -178,27 +335,27 @@ function isElementInViewport(el) {
 }
 
 function callbackFunc() {
-    console.log("hello")
-    for (var i = 0; i < items.length; i++) {
-        console.log("entered for condition")
+    once = 1;
+    for (var i = 0; i < items.length; i++) {   
       if (isElementInViewport(items[i])) {
-        console.log("entered first if condition")
-        if(!items[i].classList.contains("in-view")){
-            console.log("entered second if condition")
-          items[i].classList.add("in-view");
+        if(!items[i].classList.contains("in-view")) {
+            items[i].classList.add("in-view");
         }
-      } else if(items[i].classList.contains("in-view")) {
-        console.log("entered else if condition")
-          items[i].classList.remove("in-view");
+      } else if (items[i].classList.contains("in-view")) {
+        items[i].classList.remove("in-view");
       }
     }
 }
 
-
-//book page functions
+// book page functions
 function turnRight()
     {
-       
+        if (page !== 3 && add === 0) {
+            document.getElementById("next-page").style.visibility = "hidden";
+        } else {
+            document.getElementById("next-page").style.visibility = "visible";
+            add = 1;
+        }
         if(si>=1){
             si--;
         }
@@ -236,21 +393,24 @@ function turnRight()
     }
 
 let changePages = (event) => {
-    document.getElementById(`page${pageCount}`).style.display = "none";
-    if (event.target.id === "next-page" || event.target.id === "start-button") {
-        pageCount++;
-    } else if (event.target.id === "previous-page") {
-        pageCount--;
+    if (event.target.id === "next-page" || event.target.id === "start-button" || event.target.id === "previous-page") {
+        document.getElementById(`page${pageCount}`).style.display = "none";
+        if (event.target.id === "next-page" || event.target.id === "start-button") {
+            pageCount++;
+        } else if (event.target.id === "previous-page") {
+            pageCount--;
+        }
+        document.getElementById(`page${pageCount}`).style.display = "block";
+        window[`page${pageCount}`]();
     }
-    document.getElementById(`page${pageCount}`).style.display = "block";
-    window[`page${pageCount}`]();
+    
 }
 
 let addContent = (array) => {
     for (let i = 1; i <= array.length; i++) {
         const content = document.createElement("div");
         document.getElementById(`content-page${pageCount}`).appendChild(content);
-        console.log(document.getElementById(`content-page${pageCount}`));
+        //console.log(document.getElementById(`content-page${pageCount}`));
         content.innerText = array[i - 1];
         content.setAttribute("id", `title${idArrayPage1[i - 1]}`);
     }
