@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styleBook.css" type="text/css">
     <link rel="stylesheet" href="styleCoffeeHistory.css" type="text/css">
     <link rel="stylesheet" href="styleCoffeeQuestions.css" type="text/css">
+    <link rel="stylesheet" href="coffeeType.css" type="text/css">
     <script src="main.js" type="text/javascript"></script>
 </head>
 <body>
@@ -18,6 +19,8 @@
             <button class="start-button" id="start-button">להתחלת הלומדה</button>
             <img class="icon" src="assets/media/startPage/icon.png">
         </div>
+
+        
 
         <div class="page1" id="page1">
             <div class="headline1">רקע</div>
@@ -98,20 +101,20 @@
                 <div class="loading-bar">
                     <div class="loading-bar-progress" id="loading-bar-progress"></div>
                 </div>
-                <ul class="icon2">
-                    <li class="icon4">
+                <ul class="icon12">
+                    <li class="icon14">
                     <input type="radio" name="answer" id="a" class="answer">
                     <label for="a" id="a_text">Answer</label>
                     </li>
-                    <li class="icon4">
+                    <li class="icon14">
                     <input type="radio" name="answer" id="b" class="answer">
                     <label for="b" id="b_text">Answer</label>
                     </li>
-                    <li class="icon4">
+                    <li class="icon14">
                     <input type="radio" name="answer" id="c" class="answer">
                     <label for="c" id="c_text">Answer</label>
                     </li>
-                    <li class="icon4">
+                    <li class="icon14">
                     <input type="radio" name="answer" id="d" class="answer">
                     <label for="d" id="d_text">Answer</label>
                     </li>
@@ -122,8 +125,135 @@
         </div>
 
         <div class="page8" id="page8">
-            <div class="square1"></div>
-            <div class="square2"></div>
+            <div id="content-page8"></div>
+                <div class="square1" id="arabica">קפה ערביקה</div>
+                <div class="square2" id="robosta">קפה רובוסטה</div>
+            </div>
+        </div>
+
+        <div class="coffee-kinds" id="coffee-kinds">
+            <div id="coffee-title" class="coffee-title"></div>
+            <div id="coffee-content"></div>
+            <img src="assets/media/backArrow.png" alt="backArrow" id="back">
+        </div>
+
+        <div class="page9" id="page9">
+            <div class="headline1">זני קפה</div>
+            <div class="tables">
+                <div class="arabica-col" id="arabica-col"></div>
+                <div class="robosta-col" id="robosta-col"></div>
+            </div>
+            <div class="coffee-icons">
+                <img src="assets/media/coffeKinds/arabica/arabica.png">
+                <img src="assets/media/coffeKinds/robosta/robosta.png" style="margin-left: 2rem;">
+            </div>
+            <div class="icons-title">
+                <div style="color: #d9a866;">קפה ערביקה</div>
+                <div style="color: #9d5c2d;">קפה רובוסטה</div>
+            </div>
+        </div>
+
+        <div class="page10" id="page10">
+            <div class="headline1">זני קפה</div>
+            <div class="class">
+                <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" /> -->
+                <div class="quiz-container" id="quiz1">
+                <h2 id="question1" class="question">Question</h2>
+                <div class="loading-bar">
+                    <div class="loading-bar-progress" id="loading-bar-progress1"></div>
+                </div>
+                <ul class="icon12">
+                    <li class="icon14">
+                    <input type="radio" name="answer1" id="h" class="answer1">
+                    <label for="h" id="h_text">נכון</label>
+                    </li>
+                    <li class="icon14">
+                    <input type="radio" name="answer1" id="i" class="answer1">
+                    <label for="i" id="i_text">לא נכון</label>
+                    </li>
+                    <!-- <li class="icon14">
+                    <input type="radio" name="answer1" id="j" class="answer1">
+                    <label for="j" id="j_text">Answer</label>
+                    </li>
+                    <li class="icon14">
+                    <input type="radio" name="answer1" id="k" class="answer1">
+                    <label for="k" id="k_text">Answer</label>
+                    </li> -->
+                </ul>
+                <button id="submit1">הבא <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="page11" id="page11">
+            <div class="headline1">משקאות מבוססי קפה</div>
+            <div class="coffee-backgrounds">
+                <div class="options">
+                <button id="black-coffee" data-index-number="0">קפה שחור / קפה טורקי</button>
+                <button id="white-coffee" data-index-number="1">קפה תימני / קפה לבן</button>
+                <button id="filter-coffee" data-index-number="2">קפה פילטר / פרנץ' פרס</button>
+                <button id="espresso" data-index-number="3">אספרסו</button>
+                <button id="macchiato" data-index-number="4">מקיאטו</button>
+                <button id="americano" data-index-number="5">אמריקנו</button>
+                <button id="latte" data-index-number="6">לאטה</button>
+                <button id="capuccino" data-index-number="7">קפוצ'ינו</button>
+                <button id="cortado" data-index-number="8">קורטדו</button>
+                <button id="mocha" data-index-number="9">מוקה</button>
+                <!-- <button id="au_lait">Au lait</button>
+                <button id="corretto">Corretto</button>
+                <button id="lungo">Lungo</button>
+                <button id="ristretto">Ristretto</button> -->
+                </div>
+                <div class="container">
+                <h1 class="coffee_name">בחרו את הקפה</h1>
+                <div class="cup">
+                    <div class="filling reset">
+                    <div class="coffee">קפה</div>
+                    <div class="water">מים</div>
+                    <div class="liquor">ליקר</div>
+                    <div class="milk">חלב</div>
+                    <div class="whipped_cream">קצפת</div>
+                    <div class="milk_foam">חלב מוקצף</div>
+                    <div class="steamed_milk">חלב חם</div>
+                    <div class="chocolate">שוקולד</div>
+                    </div>
+                    <div class="plate"></div>
+                </div>
+                </div>
+            </div>
+            <div class="content-page11" id="content-page11"></div>
+        </div>
+
+        <div class="page12" id="page12">
+            <div class="headline1">משקאות מבוססי קפה</div>
+            <div class="class">
+                <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" /> -->
+                <div class="quiz-container" id="quiz2">
+                <h2 id="question2" class="question">Question</h2>
+                <div class="loading-bar">
+                    <div class="loading-bar-progress" id="loading-bar-progress2"></div>
+                </div>
+                <ul class="icon12">
+                    <li class="icon14">
+                    <input type="radio" name="answer2" id="j" class="answer2">
+                    <label for="j" id="j_text">Answer</label>
+                    </li>
+                    <li class="icon14">
+                    <input type="radio" name="answer2" id="k" class="answer2">
+                    <label for="k" id="k_text">Answer</label>
+                    </li>
+                    <li class="icon14">
+                    <input type="radio" name="answer2" id="l" class="answer2">
+                    <label for="l" id="l_text">Answer</label>
+                    </li>
+                    <li class="icon14">
+                    <input type="radio" name="answer2" id="m" class="answer2">
+                    <label for="m" id="m_text">Answer</label>
+                    </li>
+                </ul>
+                <button id="submit2">הבא <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
         </div>
 
         <div class="arrows" id="arrows">

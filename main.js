@@ -87,9 +87,129 @@ const quizData = [
     }
 ];
 
-let page8Content = ["ישנם זנים רבים של קפה, אולם בעיקר שניים משמשים למשקאות קפה:", "ואילו השאר משמשים בעיקר לתעשיות הקוסמטיקה."]
+const quizData1 = [
+    {
+      question: "קפה ערביקה נחשב כקפה הראשון שתורבת",
+      correct: "h"
+    },
+    {
+      question: "קפה הרובסטה נחשב כמשובח יותר מקפה הערביקה",
+      correct: "i"
+    },
+    {
+      question: "קפה הרובסטה מכיל יותר קפאין מקפה ערביקה",
+      correct: "h"
+    },
+    {
+      question: "הערביקה משמש להגברת הקרמה בקפה",
+      correct: "i"
+    },
+    {
+        question: "צורת הפולים של הרובסטה היא שטוחה וארוכה ואילו צורת הפולים של הערביקה היא עגולה ומקומרת",
+        correct: "i"
+    },
+    {
+        question: "ניתן למצוא את קפה הערביקה גדל פרא בהרי אתיופיה",
+        correct: "h"
+    }
+];
 
-// 
+const quizData2 = [
+    {
+      question: "איזה קפה מוכן על ידי שילוב של זרעי תירס או חיטה ותערובת תבלינים בשם חוויאג׳?",
+      j: "קפה טורקי",
+      k: "קפה תימני",
+      l: "קפה פילטר (פרנץ' פרס)",
+      m: "אספרסו",
+      correct: "k"
+    },
+    {
+      question: "איזה קפה מוכן על ידי הזרמת קיטור בלחץ גבוהה דרך אבקה דחוסה של קפה טחון?",
+      j: "קפה טורקי",
+      k: "קפה תימני",
+      l: "קפה פילטר (פרנץ' פרס)",
+      m: "אספרסו",
+      correct: "m"
+    },
+    {
+      question: "מהו קורטדו?",
+      j: "קפה פילטר עם חלב",
+      k: "אספרסו מוכתם עם קצף",
+      l: "אספרסו עם הרבה חלב מורתח ומעט קצף",
+      m: "אספרסו עם כמות שווה לו של חלב מוקצף ומעט קצף",
+      correct: "m"
+    }
+];
+
+let page8Content = ["ישנם זנים רבים של קפה, אולם בעיקר שניים משמשים למשקאות קפה:", "ואילו השאר משמשים בעיקר לתעשיות הקוסמטיקה."]
+let coffeeKindsContent = [
+    ["ההנחה המקובלת היא כי קפה הערביקה הוא מין הקפה הראשון שתורבת,\n והוא גודל בדרום מערב חצי האי ערב עוד לפני 1,000 שנים.", "במקור, הערביקה גדל באזורי ההרים של אתיופיה. כיום קשה למצוא שם גידולים שצמחו פרא\n ורוב הגידולים הם ערבוב של עצים שגדלו פרא ועצים שניטעו.", "הצורה הנפוצה היא שיחים צפופים.\n כמו כן, ניתן למצוא ערביקה בדרום סודאן והר מרסביט בצפון קניה."],
+    ["קפה רובוסטה הוא מין בסוג קפה שמקורו ממערב אפריקה. את קפה הרובוסטה מגדלים בעיקר\n באפריקה ובברזיל בגבהים שבין 200 ל-800 מטרים, וכן בדרום מזרח אסיה במקומות אליהם הביאו\n הצרפתים את הצמח בסוף המאה ה-19.", "במהלך שנות ה-2000 הפכה וייטנאם ליצואנית הגדולה ביותר בעולם של זן הרובוסטה.\n כשליש מן הקפה המיוצר בעולם הוא מסוג רובוסטה."]
+]
+
+let page9Content = [
+    ["ניתן להכין ממנו קפה משובח יותר", "מכיל פחות קפאין", "מתאפיין בטעמים מתוקים יותר,\n קרמה יחסית נמוכה, מרירות עדינה", "צורת הפולים שטוחה וארוכה וצבעם ירוק עמוק", "רגיש מאוד לכפור, דבר שמקשה מאוד על גידולו\n ועקב כך מחירו גבוה"],
+    ["פחות איכותי לייצור משקה הקפה", "כמות קפאין גבוהה - בין 2 ל-4.5 אחוזים", "ניחן במרירות ובקרמה עבה, מריר, פשוט, ומשמש\n לרוב לחיזוק תערובות קפה ולהגברת הקרמה\n באספרסו.", "צורת הפולים היא קמורה ועגולה, וצבעם ירוק בהיר", "סביל לתנאי חליטה לא אופטימליים, זול יותר"]
+]
+
+let page11Content = [
+    {
+        content: "קפה טורקי, או בשמו האחר, קפה שחור, הוא הדרך הבסיסית ביותר והעתיקה ביותר להכנת קפה ומקורה במזרח התיכון. שיטה זו מבוססת על כתישה ידנית של הפולים באמצעות מכתש ועלי, ובישול האבקה בקנקן הנקרא ג׳זווה. שיטה זו מפיקה קפה שמתאפיין בטעם וארומה חזקים במיוחד.",
+        highlight: ["הבסיסית", "והעתיקה", "ומקורה במזרח התיכון", "כתישה ידנית", "ובישול האבקה", "קפה שמתאפיין בטעם וארומה חזקים במיוחד"]
+    }, 
+    {
+        content: "קפה תימני, או בשמו האחר, קפה לבן, הוא משקה שמקורו בתימן. כפי שניתן להסיק מהשם, צבעו של קפה זה בהיר יחסית בעקבות זמן קלייה קצר במיוחד.<br/> נהוג להוסיף לו זרעי תירס או חיטה שמחלישים את עוצמתו, ותערובת תבלינים בשם חוויאג׳ המוסיפה חריפות.",
+        highlight: ["שמקורו בתימן", "צבעו", "בהיר יחסית", "זמן קלייה קצר במיוחד", "נהוג להוסיף",  "שמחלישים", "המוסיפה חריפות"]
+    },
+    {
+        content: "באנגלית, המכשיר ידוע בצפון אמריקה כמכבש צרפתי <br/>(French Press) וזהו מכשיר להכנת קפה מסונן מהבוץ.<br/> המכשיר מורכב מכוס זכוכית ופילטר מתכתי הניתן לדחיסה מהפתח ועד לתחתית הכוס: שמים קפה טחון ומים רותחים בכוס הזכוכית, ומשאירים לחליטה של 2 דקות.<br/> לאחר מכן דוחסים את הקפה עד שהפילטר מפריד בין אבקת הקפה הטחון לקפה החלוט, מוזגים לכוס ושותים.",
+        highlight: ["מכשיר להכנת קפה מסונן מהבוץ", "מורכב מכוס זכוכית ופילטר מתכתי הניתן לדחיסה מהפתח ועד לתחתית הכוס"]
+    }, 
+    {
+        content: "הדרך המודרנית והמשוכללת ביותר להכנת קפה היא שימוש במכונת האספרסו, בשיטה שהומצאה בצרפת בשנת 1922. בשיטה זו מזרימים קיטור בלחץ גבוה דרך אבקה דחוסה של פולי קפה טחונים. התוצאה היא תמצית חזקה וארומטית של קפה המכוסה בשכבת קצף המכונה קרמה. את האספרסו ניתן לשתות ישירות או להשתמש בו על מנת ליצור משקאות קפה אחרים.",
+        highlight: ["הדרך המודרנית והמשוכללת", "שהומצאה בצרפת בשנת 1922", "מזרימים קיטור בלחץ גבוה", "התוצאה היא תמצית חזקה וארומטית של קפה המכוסה בשכבת קצף"]
+    }, 
+    {
+        content: "משקה המורכב ממנת אספרסו עם מעט חלב מוקצף.<br/> נגיעת החלב ממתנת את טעם הקפה המריר בנגיעה של מתיקות. פירוש שם המשקה הוא למעשה ״מוכתם״, מכיוון שהאספרסו מוכתם במעט קצף החלב.", 
+        highlight: ["משקה המורכב ממנת אספרסו עם מעט חלב מוקצף"]
+    }, 
+    {
+        content: "המשקה מכיל אספרסו אשר נוספו לו מים רותחים. כמות הקפאין במשקה זהה לכמות שבאספרסו, אולם טעמו שונה משל קפה שחור מבושל. מקורו של המשקה בתקופת מלחמת העולם השנייה, לאחר שחרור איטליה על ידי בעלות הברית, ובייחוד על ידי חיילי צבא ארצות הברית. החיילים האמריקאים נהגו לדלל את האספרסו, על מנת לדמות את טעמו לטעם הקפה שהם היו רגילים לו מארצות הברית.", 
+        highlight: ["מכיל אספרסו אשר נוספו לו מים רותחים", "מקורו של המשקה בתקופת מלחמת העולם השנייה", " החיילים האמריקאים נהגו לדלל את האספרסו"]
+    }, 
+    {
+        content: "משקה קפה שבבסיסו נהוג להשתמש בכוס אחת או שתיים של אספרסו, הרבה חלב מורתח ושכבה אחרונה ודקה של חלב מוקצף מעל. המשקה נחשב במקורו מאמריקה, שם הגיע לשיא הפופולריות במהלך שנות ה-80. הוא ידוע בזכות מרקם החלב העשיר שלו ואומנות קצף הלאטה מלאת היצירתיות.",
+        highlight: ["משקה שבבסיסו נהוג להשתמש בכוס אחת או שתיים של אספרסו"]
+    }, 
+    {
+        content: "משקה קפה איטלקי המוכן באמצעות עירוב של אספרסו, חלב חם, וחלב מוקצף. האספרסו נשפך לשליש התחתון של הכוס, והוא מלווה אחריו בכמות שווה של חלב חם. השליש העליון של הכוס מכיל חלב מוקצף. מקור השם במסדר הנזירים הקפוצ'ינים, אשר צבע גלימות לבושם מזכיר את צבעיו של משקה הקפוצ'ינו.",
+        highlight: ["משקה קפה איטלקי המוכן באמצעות עירוב של אספרסו, חלב חם וחלב מוקצף"]
+    }, 
+    {
+        content: "משקה המכיל מנת אספרסו וכמות זהה של חלב חם מוקצף- בכוס אמורה להיות כמות קטנה של קצף. הוא הומצא בחבל הבאסקים של ספרד, ומשם נפוץ לאזורים נוספים כמו צפון פורטוגל וקובה. פירוש השם ״קורטדו״ הוא ״לחתוך״ באיטלקית, והכוונה היא שבמשקה הזה החלב כמו ״חותך״ את האספרסו.",
+        highlight: ["משקה המכיל מנת אספרסו וכמות זהה של חלב חם מוקצף", "הוא הומצא בחבל הבאסקים של ספרד"]
+    }, 
+    {
+        content: "מוקה הוא משקה של אספרסו (שליש), חלב מורתח (שני שלישים) ומעט קקאו או סירופ שוקולד. השם מוקה נגזר מעיר הנמל מוח'א שבתימן, שהייתה מרכז סחר בקפה מהמאה ה-15 עד המאה ה-17. בשם זה מכונה זן צמח הקפה שמקורו באזור מוח'א, שטעמו דומה לקפה עם שוקולד. הגרסה המודרנית מחקה אותו באמצעות זני קפה אחרים שמוסיפים להם קקאו.",
+        highlight: ["משקה של אספרסו", "חלב מורתח", "ומעט קקאו או סירופ שוקולד"]
+    }
+]
+
+
+
+let blackCoffee;
+
+let check1 = 0;
+let check2 = 0;
+let coffeeTitle = ["קפה ערביקה", "קפה רובוסטה"];
+let contentCheck;
+let iconsCheck = 0;
+let page9Once = 0;
+let page11Once = 0;
+
+
+
+// quiz variables
 let quiz;
 let answerEls;
 let questionEl;
@@ -100,9 +220,18 @@ let d_text;
 let submitBtn;
 let loadingProgress;
 let answer12;
+let h_text;
+let i_text;
+let j_text;
+let k_text;
+let l_text;
+let m_text;
 
 let currentQuiz = 0;
 let score = 0;
+
+let add1;
+let questions;
 
 // book page variables
 let idArrayPage1 = ["1", "2", "3", "4"]
@@ -111,11 +240,19 @@ let z;
 let right;
 let page;
 let addNext;
+let add;
 
 // scroll page variables
 var items;
 let cardsClass;
 let once = 0;
+
+//
+let coffee_name;
+let coffee_filling;
+let buttons;
+let current_element;
+let coffeeArray = [];
 
 window.addEventListener("load", () => {
     pageCount = 0;
@@ -149,13 +286,19 @@ var page2 = () => {
 
 var page3 = () => {
     idArrayPage1 = ["7", "8", "9"]
-    for (let i = 1; i <= 3; i++) {
-        const icon = document.createElement("img");
-        document.getElementById("icon-page3").appendChild(icon);
-        icon.setAttribute("src", `assets/media/historyPage/icon${i}.png`);
-        icon.setAttribute("style", `padding-bottom: 4rem;`)
-        //console.log(document.getElementById("icon-page3"))
+    if (iconsCheck === 0) {
+        for (let i = 1; i <= 3; i++) {
+            const icon = document.createElement("img");
+            document.getElementById("icon-page3").appendChild(icon);
+            icon.setAttribute("src", `assets/media/historyPage/icon${i}.png`);
+            icon.setAttribute("style", `padding-bottom: 4rem;`)
+            //console.log(document.getElementById("icon-page3"))
+        }
+
+        // makes sure that the function won't add the icons if they are already on the screen.
+        iconsCheck = 1;
     }
+   
     // addContent(page3Content);
 }
 
@@ -180,7 +323,6 @@ var page4 = () => {
     } else {
         document.getElementById("next").style.display = "none";
     }
-
 }
 
 var page5 = () => {
@@ -232,16 +374,37 @@ var page6 = () => {
 var page7 = () => {
     window.scrollTo(0,0); 
     document.body.style.overflow = "hidden";
-    quiz = document.getElementById("quiz");
-    answerEls = document.querySelectorAll(".answer");
+
+    a_text = document.getElementById("a_text");
+    b_text = document.getElementById("b_text");
+    c_text = document.getElementById("c_text");
+    d_text = document.getElementById("d_text");
+
+    quizQuestions(1);
+}
+
+var quizQuestions = (quizPage) => {
+
+    console.log("quizQuestions")
+    if (quizPage === 1) {
+        add1 = "";
+        questions = quizData;
+        
+    } else if (quizPage === 2) {
+        add1 = 1;
+        questions = quizData1
+    } else if (quizPage === 3) {
+        add1 = 2;
+        questions = quizData2;
+    }
+
+    quiz = document.getElementById(`quiz${add1}`);
+    answerEls = document.querySelectorAll(`.answer${add1}`);
     // questionEl = document.getElementById("question");
-    // a_text = document.getElementById("a_text");
-    // b_text = document.getElementById("b_text");
-    // c_text = document.getElementById("c_text");
-    // d_text = document.getElementById("d_text");
+   
     console.log("reloading")
-    submitBtn = document.getElementById("submit");
-    loadingProgress = document.getElementById("loading-bar-progress");
+    submitBtn = document.getElementById(`submit${add1}`);
+    loadingProgress = document.getElementById(`loading-bar-progress${add1}`);
     
     currentQuiz = 0;
     score = 0;
@@ -251,9 +414,8 @@ var page7 = () => {
     //     answerEls.forEach((answerEl) => (answerEl.checked = false));
     // }
     // answerEls.forEach((answerEl) => (answerEl.checked = false));
-    loadQuiz();
+    loadQuiz(quizPage);
     console.log("loadagain")
-    
     
 
     submitBtn.addEventListener("click", () => {
@@ -265,7 +427,7 @@ var page7 = () => {
                 const answer = answer12;
 
                 if (answer) {
-                    if (answer === quizData[currentQuiz].correct) {
+                    if (answer === questions[currentQuiz].correct) {
                         document.getElementById(`${answer}_text`).style.cssText = "border: 2px solid green; background-color: rgb(0, 128, 0, 0.4)";
                         setTimeout(() => {
                         document.getElementById(`${answer}_text`).style.cssText = "border: none; background-color: white;";
@@ -274,27 +436,27 @@ var page7 = () => {
                     } 
                     else {
                         document.getElementById(`${answer}_text`).style.cssText = "border: 2px solid red; background-color: rgb(255, 0, 0, 0.4)";
-                        document.getElementById(`${quizData[currentQuiz].correct}_text`).style.cssText = "border: 2px solid green; background-color: rgb(0, 128, 0, 0.4)"
+                        document.getElementById(`${questions[currentQuiz].correct}_text`).style.cssText = "border: 2px solid green; background-color: rgb(0, 128, 0, 0.4)"
                         setTimeout(() => {
                         document.getElementById(`${answer}_text`).style.cssText = "border: none; background-color: white;";
-                        document.getElementById(`${quizData[currentQuiz].correct}_text`).style.cssText = "border: none; background-color: white;";
+                        document.getElementById(`${questions[currentQuiz].correct}_text`).style.cssText = "border: none; background-color: white;";
                         }, 4000)
                     }
             
                     setTimeout(() => {
                         currentQuiz++;
                         console.log(currentQuiz)
-                        console.log(quizData.length)
-                        loadingProgress.style.width = `${(currentQuiz * 100) / quizData.length}%`;
-                        if (currentQuiz < quizData.length) {
+                        console.log(questions.length)
+                        loadingProgress.style.width = `${(currentQuiz * 100) / questions.length}%`;
+                        if (currentQuiz < questions.length) {
                             console.log("if")
                             
-                        loadQuiz();
+                        loadQuiz(quizPage);
                         } else {
                         quiz.innerHTML = `
-                                    <h2 class="question"> ענית נכון על  ${score}/${quizData.length} שאלות</h2>
+                                    <h2 class="question"> ענית נכון על  ${score}/${questions.length} שאלות</h2>
                     
-                                    <button onclick="loadQuiz()" id="realoding">Reload <i class="fa-solid fa-arrows-rotate"></i></button>
+                                    <button onClick="quizQuestions()" id="realoding">Reload <i class="fa-solid fa-arrows-rotate"></i></button>
                                 `;
                         }
                         submitBtn.disabled = false;
@@ -307,20 +469,194 @@ var page7 = () => {
     });
 }
 
+
 var page8 = () => {
+    idArrayPage1["12", "14"]
     addContent(page8Content);
+    document.body.classList.remove("coffee-background");
+    document.getElementById("page8").style.display = "block";
+    document.getElementById("coffee-kinds").style.display = "none";
+    document.getElementById("arabica").addEventListener("click", coffeeKinds);
+    document.getElementById("robosta").addEventListener("click", coffeeKinds);
+
+    if (check1 >= 1 && check2 >= 1) {
+        document.getElementById("arrows").style.visibility = "visible";
+    } else {
+        document.getElementById("arrows").style.visibility = "hidden";
+    }
+}
+
+let coffeeKinds = (event) => {
+    // document.getElementById("page8").classList.add("coffee-kinds");
+    // document.getElementById("")
+    let coffeeName;
+    if (event.target.id === "robosta") {
+        coffeeName = 1;
+        check1++;
+    } else {
+        coffeeName = 0;
+        check2++;
+    }
+
+    document.body.classList.add("coffee-background")
+    console.log(coffeeKindsContent[0].length)
+    console.log(coffeeKindsContent[1].length)
+
+    document.getElementById("page8").style.display = "none";
+    document.getElementById("coffee-kinds").style.display = "block";
+    
+   
+    document.getElementById("coffee-title").innerText = `${coffeeTitle[coffeeName]}`;
+    for (let i = 0; i < coffeeKindsContent[coffeeName].length; i++) {
+        let div = document.createElement("div");
+        div.innerText = `${coffeeKindsContent[coffeeName][i]}`
+        div.setAttribute("class", `content-${event.target.id}${i + 1}`)
+        let img = document.createElement("img");
+        img.setAttribute("src", `assets/media/coffeKinds/${event.target.id}/icon${i+1}.png`)
+        img.setAttribute("class", `icon-${event.target.id}${i + 1}`)
+        document.getElementById("coffee-content").append(div, img)
+        console.log(document.getElementById("coffee-kinds"));
+    }
+
+    document.getElementById("back").addEventListener("click", () => {
+        document.getElementById("coffee-content").innerHTML = "";
+        console.log("g")
+        page8();
+    })
+}
+
+var page9 = () => {
+    if (page9Once === 0) {
+        for (let i = 0; i < 5; i++) {
+            let div1 = document.createElement("div");
+            div1.setAttribute("class", "col1")
+            div1.innerText = `${page9Content[0][i]}`
+            document.getElementById("arabica-col").appendChild(div1);
+            let div2 = document.createElement("div");
+            div2.setAttribute("class", "col2")
+            div2.innerText = `${page9Content[1][i]}`
+            document.getElementById("robosta-col").appendChild(div2);
+            console.log(document.getElementById("arabica-col"));
+            console.log(document.getElementById("robosta-col"));
+        }
+        page9Once = 1;
+    }
+    
+}
+
+var page10 = () => {
+    h_text = document.getElementById("h_text");
+    i_text = document.getElementById("i_text");
+
+    quizQuestions(2);
+}
+
+var page11 = () => {
+    if (page11Once === 0) {
+        document.getElementById("arrows").style.visibility = "hidden";
+    }
+    
+    // document.getElementById("content-page11").innerText = `${page11Content[0].content}`;
+    // page11Content[0].content.every(checkItems)
+    
+
+    coffee_name = document.querySelector(".coffee_name");
+    coffee_filling = document.querySelector(".filling");
+    buttons = document.querySelectorAll("button");
+    current_element = null;
+    
+    // if (pageCount === 11) {
+        [...buttons].forEach((button) => {
+            button.addEventListener("click", function buttonClick() {
+                changeCoffeeType(button);
+            });
+        });
+    // }
+    
+}
+
+let checkItems = (item) => {
+    console.log("g")
+    if (page11Content[0].highlight.includes(item)) {
+        item.classList.add("add-color");
+    }
+}
+
+const changeCoffeeType = (selected) => {
+    if (current_element) {
+        current_element.classList.remove("selected");
+        coffee_filling.classList.remove(current_element.id);
+    }
+    
+    
+    current_element = selected;
+
+    var samplestring = page11Content[current_element.dataset.indexNumber].content;
+
+    const samplearray = page11Content[current_element.dataset.indexNumber].highlight;
+
+    samplearray.forEach(str => {
+        samplestring = samplestring.replaceAll(str, `<span>${str}</span>`)
+    })
+
+    document.getElementById("content-page11").innerHTML = samplestring;
+
+    console.log(current_element.dataset.indexNumber);
+    if (!coffeeArray.includes(current_element.id)) {
+        coffeeArray.push(current_element.id);
+        console.log(coffeeArray);
+        if (coffeeArray.length === 10 && page11Once === 0) {
+            document.getElementById("arrows").style.visibility = "visible";
+            page11Once = 1;
+        }
+    }
+    
+    coffee_filling.classList.add(current_element.id);
+    current_element.classList.add("selected");
+    coffee_name.innerText = selected.innerText;
+
+};
+
+const setActiveType = (element) => {
+    element.toggleClass("selected");
+};
+
+var page12 = () => {
+    j_text = document.getElementById("j_text");
+    k_text = document.getElementById("k_text");
+    l_text = document.getElementById("l_text");
+    m_text = document.getElementById("m_text");
+
+    quizQuestions(3);
 }
 
 // 
-function loadQuiz() {
-    answerEls.forEach((answerEl) => (answerEl.checked = false));
-    const currentQuizData = quizData[currentQuiz];
+function loadQuiz(quizPage) {
+    if (quizPage === 1) {
+        answerEls.forEach((answerEl) => (answerEl.checked = false));
+        const currentQuizData = quizData[currentQuiz];
 
-    document.getElementById("question").innerText = currentQuizData.question;
-    document.getElementById("a_text").innerText = currentQuizData.a;
-    document.getElementById("b_text").innerText = currentQuizData.b;
-    document.getElementById("c_text").innerText = currentQuizData.c;
-    document.getElementById("d_text").innerText = currentQuizData.d;
+        document.getElementById("question").innerText = currentQuizData.question;
+        a_text.innerText = currentQuizData.a;
+        b_text.innerText = currentQuizData.b;
+        c_text.innerText = currentQuizData.c;
+        d_text.innerText = currentQuizData.d;
+    } else if (quizPage === 2) {
+        answerEls.forEach((answerEl) => (answerEl.checked = false));
+        const currentQuizData = quizData1[currentQuiz];
+        
+        document.getElementById("question1").innerText = currentQuizData.question;
+    } else if (quizPage === 3) {
+        answerEls.forEach((answerEl) => (answerEl.checked = false));
+        const currentQuizData = quizData2[currentQuiz];
+
+        document.getElementById("question2").innerText = currentQuizData.question;
+        j_text.innerText = currentQuizData.j;
+        k_text.innerText = currentQuizData.k;
+        l_text.innerText = currentQuizData.l;
+        m_text.innerText = currentQuizData.m;
+    }
+    
 }
 
 // scroll page functions
@@ -407,13 +743,18 @@ let changePages = (event) => {
 }
 
 let addContent = (array) => {
-    for (let i = 1; i <= array.length; i++) {
-        const content = document.createElement("div");
-        document.getElementById(`content-page${pageCount}`).appendChild(content);
-        //console.log(document.getElementById(`content-page${pageCount}`));
-        content.innerText = array[i - 1];
-        content.setAttribute("id", `title${idArrayPage1[i - 1]}`);
+    if (contentCheck !== array) {
+        for (let i = 1; i <= array.length; i++) {
+            const content = document.createElement("div");
+            document.getElementById(`content-page${pageCount}`).appendChild(content);
+            //console.log(document.getElementById(`content-page${pageCount}`));
+            content.innerText = array[i - 1];
+            content.setAttribute("id", `title${idArrayPage1[i - 1]}`);
+        }
     }
+
+    //checks if the function should add the content, if contentCheck === array, it means that the function doeasn't need to add the content again.
+    contentCheck = array;
 }
 
 // let pages = () => {

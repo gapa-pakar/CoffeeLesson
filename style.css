@@ -28,11 +28,12 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    position: relative;
+    position: fixed;
     margin: 0rem 2.4rem;
     visibility: hidden;
     cursor: pointer;
     bottom: 10rem;
+    z-index: 4;
 }
 
 .arrow {
@@ -273,5 +274,237 @@ body {
 }
 
 .page8 {
+    display: none;
+}
+
+.square1, .square2 {
+    font-family: Petel-Bold;
+    background-color: #3b220e;
+    width: 15rem;
+    height: 5rem;
+    position: absolute;
+    top: 20rem;
+    border-radius: 2rem;
+    background-repeat: no-repeat;
+    background-position: 3.5rem 1rem;
+    text-align: center;
+    /* vertical-align: sub; */
+    padding-top: 12rem;
+    cursor: pointer;
+}
+
+.square1 {
+    border: 5px solid #d9a866;
+    color: #d9a866;
+    right: 40rem;
+    background-image: url(assets/media/coffeKinds/arabica/arabica.png);
+   
+}
+
+.square2 {
+    border: 5px solid #9d5c2d;
+    color: #9d5c2d;
+    right: 62rem;
+    background-image: url(assets/media/coffeKinds/robosta/robosta.png);
+}
+
+.coffee-background {
+    background-color: #e0c7a6;
+    background-image: url(assets/media/coffeKinds/chocolate1.png);
+    /* background-image: url(assets/media/coffeKinds/chocolate2.png);
+    background-size: cover; */
+    background-repeat: no-repeat;
+    background-position: -3.5rem -0rem;
+    width: 100vw;
+    height: 100vh;
+}
+
+.coffee-kinds {
+    display: none;
+}
+
+.coffee-title {
+    font-family: Petel-Bold;
+    position: absolute;
+    top: 8rem;
+    right: 14rem;
+    font-size: 5rem;
+}
+
+#back {
+    position: absolute;
+    width: 5rem;
+    margin-top: 48rem;
+    right: 4rem;
+    cursor: pointer;
+}
+
+.content-arabica1, .content-arabica2, .content-arabica3, .content-robosta1, .content-robosta2{
+    line-height: 1.5;
+}
+
+.content-arabica1 {
+    position: absolute;
+    /* top: 20rem; */
+    right: 14rem;
+    margin-top: 17rem;
+}
+
+.content-arabica2 {
+    position: absolute;
+    top: 28rem;
+    right: 34rem;
+}
+
+.content-arabica3 {
+    position: absolute;
+    top: 40rem;
+    right: 22rem;
+}
+
+.content-robosta1 {
+    position: absolute;
+    margin-top: 17rem;
+    right: 14rem;
+}
+
+.content-robosta2 {
+    position: absolute;
+    top: 32rem;
+    right: 32rem;
+}
+
+.icon-arabica1 {
+    position: absolute;
+    margin-top: 17rem;
+    right: 72rem;
+}
+
+.icon-arabica2 {
+    position: absolute;
+    top: 26rem;
+    right: 20rem;
+}
+
+.icon-arabica3 {
+    position: absolute;
+    top: 40rem;
+    right: 72rem;
+}
+
+.icon-robosta1 {
+    position: absolute;
+    margin-top: 15.4rem;
+    right: 85.4rem;
+}
+
+.icon-robosta2 {
+    position: absolute;
+    top: 32rem;
+    right: 20rem;
+}
+
+.page9 {
+    /* background-color: #e0c7a6; */
+    background-image: url(assets/media/coffeKinds/background2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: -3.5rem -0rem; */
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+.coffee-icons {
+    position: relative;
+    top: -14rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0rem 4rem;
+    /* z-index: 4; */
+}
+
+.icons-title {
+    position: relative;
+    top: -12rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0rem 4rem;
+    font-family: Petel-Bold;
+}
+
+.tables {
+    /* width: 100rem; */
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+
+}
+
+.arabica-col, .robosta-col {
+    position: relative;
+    /* top: 2rem; */
+    display: flex;
+    flex-direction: column;   
+    /* margin-top: 2rem; */
+    top: 8rem;
+    /* width: 34rem;
+    height: 4rem; */
+    /* margin-top: 2rem; */
+    /* width: 40rem; */
+}
+
+.arabica-col {
+    right: 22rem;
+    margin-left: -36rem;
+}
+
+.robosta-col { 
+    right: 62rem;
+}
+
+.col1, .col2 {
+    width: 34rem;
+    /* height: 4rem; */
+    border-radius: 8rem;
+    /* padding: 2rem; */
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 1rem;
+    color: #fff5e1;
+}
+
+.col1 {
+    background-color: #d9a866;
+    
+}
+
+.col2 {
+    background-color: #9d5c2d;
+}
+
+.page10 {
+    display: none;
+}
+
+.page11 {
+    display: none;
+}
+
+.content-page11 {
+    position: absolute;
+    top: 22rem;
+    right: 72rem;
+    width: 44rem;
+    line-height: 1.5;
+}
+
+span {
+    color: #ee5079;
+}
+
+.page12 {
     display: none;
 }
