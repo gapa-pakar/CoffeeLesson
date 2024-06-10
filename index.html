@@ -13,6 +13,8 @@
 </head>
 <body>
     <div>
+
+
         <div class="page0" id="page0">
             <img src="assets/media/startPage/graphic.png" class="start-page-graphic">
             <div class="title">לומדת קפה</div>
@@ -56,8 +58,8 @@
                          <figure class="front" style="background-color: white;"><div id="title11"></div></figure>
                      </div>
                      <div class="right">
-                         <figure class="back" style="background-color: white;"></figure>
-                         <figure class="front" style="background-color: white;">
+                        <figure class="back" style="background-color: white;"></figure>
+                        <figure class="front" style="background-color: white;">
                             <div id="title10"></div>
                         </figure>
                      </div>
@@ -73,14 +75,26 @@
                         </figure>
                      </div>
                 </div>
-                <button id="previous" class="previous" onclick="turnLeft()">Prev</button> 
-                <button id="next" class="next" onclick="turnRight()">Next</button>
-                <br/>
+                <!-- <div class="buttons-container"> -->
+                    <button id="previous" class="previous" onclick="turnLeft()">Prev</button> 
+                    <button id="next" class="next" onclick="turnRight()">Next</button>
+                <!-- </div> -->
+                <!-- <br/> -->
             </div>
         </div>
 
         <div class="page5" id="page5">
             <div class="headline1">היסטוריה</div>
+            <div class="instructions-title">סדרו את האירועים בסדר הנכון לפי הסיפור</div>
+            <div class="sortlist">
+                <ul id="sortlist">
+                    <!-- <li id="first"></li>
+                    <li id="fourth"></li>
+                    <li id="third"></li>
+                    <li id="second"></li>
+                    <li id="fifth"></li> -->
+                </ul>
+            </div>
         </div>
 
         <div class="page6" id="page6">
@@ -119,12 +133,13 @@
                     <label for="d" id="d_text">Answer</label>
                     </li>
                 </ul>
-                <button id="submit">הבא <i class="fa-solid fa-chevron-right"></i></button>
+                <button id="submit" class="submit">הבא <i class="fa-solid fa-chevron-right"></i></button>
                 </div>
             </div>
         </div>
 
         <div class="page8" id="page8">
+            <div class="headline1">זני קפה</div>
             <div id="content-page8"></div>
                 <div class="square1" id="arabica">קפה ערביקה</div>
                 <div class="square2" id="robosta">קפה רובוסטה</div>
@@ -180,7 +195,7 @@
                     <label for="k" id="k_text">Answer</label>
                     </li> -->
                 </ul>
-                <button id="submit1">הבא <i class="fa-solid fa-chevron-right"></i></button>
+                <button id="submit1" class="submit">הבא <i class="fa-solid fa-chevron-right"></i></button>
                 </div>
             </div>
         </div>
@@ -251,15 +266,30 @@
                     <label for="m" id="m_text">Answer</label>
                     </li>
                 </ul>
-                <button id="submit2">הבא <i class="fa-solid fa-chevron-right"></i></button>
+                <button id="submit2" class="submit">הבא <i class="fa-solid fa-chevron-right"></i></button>
                 </div>
             </div>
         </div>
 
-        <div class="arrows" id="arrows">
+        <footer>
+            <div>gggggggggggg</div>
+            <div id="arrows">
+                <div class="arrows">
+                    <img src="assets/media/backArrow.png" alt="backArrow" class="arrow" id="previous-page">
+                    <img src="assets/media/nextArrow.png" alt="nextArrow" class="arrow" id="next-page">
+                </div>
+                <div class="arrows-title">
+                    <div>לעמוד הקודם</div>
+                    <div>לעמוד הבא</div>
+                </div>
+            </div>
+        </footer> 
+        <!-- <div class="arrows" id="arrows">
             <img src="assets/media/backArrow.png" alt="backArrow" class="arrow" id="previous-page">
             <img src="assets/media/nextArrow.png" alt="nextArrow" class="arrow" id="next-page">
-        </div>
+        </div> -->
     </div>
+
+    
 </body>
 </html>

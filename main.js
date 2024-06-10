@@ -42,6 +42,8 @@ let page3Contentall = [
 
 let page4Content = ["האגדה הנפוצה ביותר על גילוי הקפה מתרחשת בשנת 800 לפני הספירה ומספרת על רועה עיזים אתיופי בשם חאלדי.\n\n\n\n\n\n\n\n\n העיזים של חאלדי בדרך כלל רגועות ונינוחות.\n יום אחד, חאלדי הבחין שכשהעיזים שלו אוכלות מגרגירי יער אדומים של שיח מסוים, הן הופכות לאנרגטיות וחסרות מנוחה.", ".חאלדי ניסה בעצמו לאכול את הגרגירים הללו, וכאשר טעם מהם הרגיש את ההשפעה בעצמו. נרגש מהתגלית המוזרה, הוא הביא כמה גרגירים לנזיר בכפר שלו והסביר לו את שהתרחש. הנזיר קבע כי הגרגירים הם ״עבודת השטן״ והשליך אותם לאש הסמוכה. כך למעשה התרחשה קליית הקפה הראשונה", "זמן קצר לאחר מכן, עלתה ארומה עוצמתית מן האש ומלאה את החדר בו נכחו חאלדי והנזיר. על מנת לשמר את הארומה, הנזיר הורה להוציא את הגרגירים מן האש ולשפוך עליהם מים, וכך נוצרה כוס הקפה הראשונה."]
 
+let page5Content = ["חאלידי מראה את הפרי לנזיר שלו", "הנזיר מורה להוציא את הפולים מהאש ולשפוך עליהם מים", "חאלידי רועה הצאן מבחין כי הכבשים שלו אנרגטיות", "חאלידי מבין כי הכבשים אכלו מפרי אדום", "הנזיר זורק את הפולים לאש", "חאלידי טועם מהפרי וחש אנרגטי"]
+
 let page6Content = ["התפשטות הקפה בעולם מתחילה מאתיופיה", "האתיופים מתחילים למכור את פולי הקפה לסוחרים ערביים שמפיצים את הפולים במדינות ערב של העולם העתיק.", "בתימן עודדו שתיית קפה מרובה על מנת לצמצם את תופעת לעיסת הגת.", "בארצות ערב חכמי הדת ניסו למנוע תחילה מהמאמינים לשתות קפה, אך ללא הצלחה.", "בתי הקפה הראשונים בעולם הוקמו במכה. המשקה התפשט ברחבי מדינות ערב אך היה מוכר במיוחד במקומות בהם היו נהוגים משחקי קוביות, רכילויות, ריקודים ושירה.", "בשלב מסוים בתי הקפה נהפכו במהרה למרכזים פוליטיים פעילים נגד הממשל ובשל כך חלק מהם הוצאו אל מחוץ לחוק.", "למדינות ערב הייתה מדיניות חד משמעית- איסור ייצוא פולי קפה בכדי שהקפה לא יגדל בשום מקום אחר בעולם ויישאר בלעדי לאזורם.", "צעד זה יצר כמיהה למשקה ופתח במרוץ להשגת זרעים.", "הסברה היא שאיטליה היא הארץ האירופאית הראשונה שהצליחה להשיג פולי קפה, כנראה על ידי סוחרים ונציאנים שביקרו במזרח התיכון.", "מאוחר יותר, במאה ה-16 וה-17, גם הולנד וצרפת הצליחו להשיג אותו.", "במאה ה-18 פולי הקפה הגיעו גם לאמריקה, כאשר סוחר צרפתי הביא עימו כמה שתילים לאחד מהאיים הקריביים.", "באדמה הפוריה ובאקלים הטרופי הצמחים התפתחו ושגשגו היטב, ותוך שנים אחדות השתילים הבודדים הפכו למטעים רחבים.", "כובשי אמריקה האירופאים הביאו עימם זרעים של צמח הקפה לאזורים שונים בדרום אמריקה, וכך הם החלו את חקלאות הקפה.", "במהרה הפכו ברזיל וקולומביה למעצמות קפה עולמיות"]
 
 const quizData = [
@@ -204,6 +206,7 @@ let check2 = 0;
 let coffeeTitle = ["קפה ערביקה", "קפה רובוסטה"];
 let contentCheck;
 let iconsCheck = 0;
+let page5Once = 0;
 let page9Once = 0;
 let page11Once = 0;
 
@@ -232,6 +235,12 @@ let score = 0;
 
 let add1;
 let questions;
+
+// event quiz variables 
+let sortingArray = ["first", "second", "third", "fourth", "fifth", "sixth"];
+let mixedArray = ["fourth", "sixth", "first", "second","fifth", "third"];
+let sortingArray1 = [];
+let finishQuiz;
 
 // book page variables
 let idArrayPage1 = ["1", "2", "3", "4"]
@@ -312,23 +321,112 @@ var page4 = () => {
     for (let i = 1; i <=3; i++) {
         document.getElementById(`title${idArrayPage1[i - 1]}`).innerText = page4Content[i - 1];
     }
-    if (page !== 0) {
-        document.getElementById("previous").style.display = "block";
-    } else {
-        document.getElementById("previous").style.display = "none";
-    }
+    // if (page !== 0) {
+    //     document.getElementById("previous").style.display = "block";
+    // } else {
+    //     document.getElementById("previous").style.display = "none";
+    // }
     
-    if (page !== 3) {
-        document.getElementById("next").style.display = "block";
-    } else {
-        document.getElementById("next").style.display = "none";
-    }
+    // if (page !== 3) {
+    //     document.getElementById("next").style.display = "block";
+    // } else {
+    //     document.getElementById("next").style.display = "none";
+    // }
 }
 
 var page5 = () => {
     window.scrollTo(0,0); 
     document.body.style.overflow = "hidden";
+
+    if (page5Once === 0) {
+        for (let i = 0; i < sortingArray.length; i++) {
+            let li = document.createElement("li");
+            li.setAttribute("id", `${mixedArray[i]}`);
+            li.innerText = `${page5Content[i]}`;
+            document.getElementById("sortlist").appendChild(li);
+        }
+        page5Once = 1;
+    }
+    
+    
     console.log("g");
+    slist(document.getElementById("sortlist"));
+}
+
+function slist (target) {
+  // (A) SET CSS + GET ALL LIST ITEMS
+  target.classList.add("slist");
+  let items = target.getElementsByTagName("li"), current = null;
+
+  // (B) MAKE ITEMS DRAGGABLE + SORTABLE
+  for (let i of items) {
+    // (B1) ATTACH DRAGGABLE
+    i.draggable = true;
+    
+    // (B2) DRAG START - YELLOW HIGHLIGHT DROPZONES
+    i.ondragstart = (ev) => {
+      current = i;
+      for (let it of items) {
+        if (it != current) { it.classList.add("hint"); }
+      }
+    };
+    
+    // (B3) DRAG ENTER - RED HIGHLIGHT DROPZONE
+    i.ondragenter = (ev) => {
+      if (i != current) { i.classList.add("active"); }
+    };
+
+    // (B4) DRAG LEAVE - REMOVE RED HIGHLIGHT
+    i.ondragleave = () => {
+      i.classList.remove("active");
+    };
+
+    // (B5) DRAG END - REMOVE ALL HIGHLIGHTS
+    i.ondragend = () => { for (let it of items) {
+        it.classList.remove("hint");
+        it.classList.remove("active");
+    }};
+ 
+    // (B6) DRAG OVER - PREVENT THE DEFAULT "DROP", SO WE CAN DO OUR OWN
+    i.ondragover = (evt) => { evt.preventDefault(); };
+ 
+    // (B7) ON DROP - DO SOMETHING
+    i.ondrop = (evt) => {
+      evt.preventDefault();
+      if (i != current) {
+        let currentpos = 0, droppedpos = 0;
+        for (let it=0; it<items.length; it++) {
+          if (current == items[it]) { currentpos = it; }
+          if (i == items[it]) { droppedpos = it; }
+        }
+        if (currentpos < droppedpos) {
+          i.parentNode.insertBefore(current, i.nextSibling);
+        } else {
+          i.parentNode.insertBefore(current, i);
+        }
+      }
+      console.log(current.id);
+      console.log(i);
+      console.log(items);
+      console.log(sortingArray);
+       for (let l = 0; l < items.length; l++) {
+        sortingArray1.push(items[l].id);
+        console.log(sortingArray1);
+      }
+      if (sortingArray1.toString() === sortingArray.toString()) {
+        console.log("g");
+        // document.getElementById("sortlist").draggable = false;
+        for (let i = 0; i < sortingArray.length; i++) {
+            document.getElementById(`${sortingArray[i]}`).draggable = false;
+            document.getElementById(`${sortingArray[i]}`).style.backgroundColor = "green";
+        }
+        
+      } else {
+        console.log(sortingArray1)
+        sortingArray1 = [];
+      }
+    };
+  }
 }
 
 var page6 = () => {
@@ -471,8 +569,9 @@ var quizQuestions = (quizPage) => {
 
 
 var page8 = () => {
-    idArrayPage1["12", "14"]
+    idArrayPage1 = ["12", "14"]
     addContent(page8Content);
+    console.log(document.getElementById("page8"))
     document.body.classList.remove("coffee-background");
     document.getElementById("page8").style.display = "block";
     document.getElementById("coffee-kinds").style.display = "none";
@@ -497,7 +596,7 @@ let coffeeKinds = (event) => {
         coffeeName = 0;
         check2++;
     }
-
+    document.getElementById("arrows").style.visibility = "hidden";
     document.body.classList.add("coffee-background")
     console.log(coffeeKindsContent[0].length)
     console.log(coffeeKindsContent[1].length)
@@ -686,12 +785,19 @@ function callbackFunc() {
 // book page functions
 function turnRight()
     {
-        if (page !== 3 && add === 0) {
-            document.getElementById("next-page").style.visibility = "hidden";
-        } else {
-            document.getElementById("next-page").style.visibility = "visible";
-            add = 1;
+        // if (page !== 3 && add === 0) {
+        //     document.getElementById("next-page").style.visibility = "hidden";
+        // } else {
+        //     document.getElementById("next-page").style.visibility = "visible";
+        //     add = 1;
+        // }
+        page++;
+        if (page === 1) {
+            document.getElementById("previous").style.visibility = "visible";
+        } else if (page === 3) {
+            document.getElementById("next").style.visibility = "hidden";
         }
+
         if(si>=1){
             si--;
         }
@@ -709,10 +815,17 @@ function turnRight()
         right[si].classList.add("flip");
         z++;
         right[si].style.zIndex=z;
-        page++;
     }
     function turnLeft()
     {
+        page--;
+        if (page === 0) {
+            document.getElementById("previous").style.visibility = "hidden";
+        } else if (page === 2) {
+            document.getElementById("next").style.visibility = "visible";
+        }
+
+
         if(si<right.length){
             si++;
         }
@@ -725,10 +838,11 @@ function turnRight()
         }
         right[si-1].className="right";
         setTimeout(function(){right[si-1].style.zIndex="auto";},350);
-        page--;
+        
     }
 
 let changePages = (event) => {
+    console.log("g")
     if (event.target.id === "next-page" || event.target.id === "start-button" || event.target.id === "previous-page") {
         document.getElementById(`page${pageCount}`).style.display = "none";
         if (event.target.id === "next-page" || event.target.id === "start-button") {
@@ -750,6 +864,7 @@ let addContent = (array) => {
             //console.log(document.getElementById(`content-page${pageCount}`));
             content.innerText = array[i - 1];
             content.setAttribute("id", `title${idArrayPage1[i - 1]}`);
+            console.log(idArrayPage1)
         }
     }
 
