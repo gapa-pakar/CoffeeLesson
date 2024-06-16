@@ -65,6 +65,117 @@ body {
     font-size: 1.5rem;
 }
 
+footer {
+    visibility: hidden;
+}
+
+.navbar {
+    width: 34rem;
+    height: 0.4rem;
+    background-color: #3b220e;
+    position: absolute;
+    right: 42rem;
+    bottom: 2rem;
+    border-radius: 20rem;
+    /* visibility: hidden; */
+}
+
+.circle {
+    width: 1.34rem;
+    height: 1.34rem;
+    background-color: #3b220e;
+    position: absolute;
+    z-index: 2;
+    border-radius: 20rem;
+}
+
+.circle-border {
+    width: 1.49rem;
+    height: 1.49rem;
+    border: 2px dashed #3b220e;
+    position: absolute;    
+    border-radius: 20rem;
+}
+
+.titles {
+    position: absolute;
+    /* right: 2rem;
+    bottom: 2rem; */
+    font-family: RubikDoodleShadow-Regular;
+    color: #3b220e;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+#circle1 {
+    right: 0rem;
+    bottom: -0.48rem;
+}
+
+#circle2 {
+    right: 12rem;
+    bottom: -0.48rem;
+}
+
+#circle3 {
+    right: 24rem;
+    bottom: -0.48rem;
+}
+
+#circle4 {
+    right: 32.9rem;
+    bottom: -0.48rem;
+}
+
+#frame4 {
+    right: 32.691rem;
+    bottom: -0.68rem;
+}
+
+#frame1 {
+    right: -0.209rem;
+    bottom: -0.68rem;
+}
+
+#frame2 {
+    right: 11.791rem;
+    bottom: -0.68rem;
+}
+
+#frame3 {
+    right: 23.791rem;
+    bottom: -0.68rem;
+}
+
+#t1 {
+    right: -0.209rem;
+    bottom: 1.8rem;
+}
+
+#t2 {
+    right: 10.8rem;
+    bottom: 1.8rem;
+}
+
+#t3 {
+    right: 23.2rem;
+    bottom: 1.8rem;
+}
+
+#t4 {
+    width: 8rem;
+    right: 30rem;
+    bottom: 1.8rem;
+}
+
+
+
+
+
+/* .circle-border {
+
+} */
+
 /* .arrow {
     width: 5rem;
     position: relative;

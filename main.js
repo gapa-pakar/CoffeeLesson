@@ -209,7 +209,8 @@ let iconsCheck = 0;
 let page5Once = 0;
 let page9Once = 0;
 let page11Once = 0;
-
+// checks if the arrows needs to be visible
+let quizCheck = 0;
 
 
 // quiz variables
@@ -266,7 +267,7 @@ let coffeeArray = [];
 window.addEventListener("load", () => {
     pageCount = 0;
     nextPageCount = 0;
-    document.getElementById("arrows").style.visibility = "hidden";
+    
     // document.getElementById("start-button").addEventListener("click", page1);
     // console.log(event.target)
     document.addEventListener("click", changePages);
@@ -279,6 +280,10 @@ window.addEventListener("load", () => {
     page = 0;
     add = 0;
 });
+
+var page0 = () => {
+    document.getElementById("arrows").style.visibility = "hidden";
+}
 
 var page1 = () => {
     //console.log("g")
@@ -345,6 +350,7 @@ var page5 = () => {
             li.innerText = `${page5Content[i]}`;
             document.getElementById("sortlist").appendChild(li);
         }
+        document.getElementById("arrows").style.visibility = "hidden"
         page5Once = 1;
     }
     
@@ -418,8 +424,10 @@ function slist (target) {
         // document.getElementById("sortlist").draggable = false;
         for (let i = 0; i < sortingArray.length; i++) {
             document.getElementById(`${sortingArray[i]}`).draggable = false;
+            document.getElementById(`${sortingArray[i]}`).style.border = "none";
             document.getElementById(`${sortingArray[i]}`).style.backgroundColor = "green";
         }
+        document.getElementById("arrows").style.visibility = "visible";
         
       } else {
         console.log(sortingArray1)
@@ -477,12 +485,17 @@ var page7 = () => {
     b_text = document.getElementById("b_text");
     c_text = document.getElementById("c_text");
     d_text = document.getElementById("d_text");
-
+    
     quizQuestions(1);
 }
 
 var quizQuestions = (quizPage) => {
 
+    if (quizCheck !== quizPage) {
+        document.getElementById("arrows").style.visibility = "hidden";
+        quizCheck = quizPage;
+    }
+    
     console.log("quizQuestions")
     if (quizPage === 1) {
         add1 = "";
@@ -551,6 +564,7 @@ var quizQuestions = (quizPage) => {
                             
                         loadQuiz(quizPage);
                         } else {
+                            document.getElementById("arrows").style.visibility = "visible";
                         quiz.innerHTML = `
                                     <h2 class="question"> ענית נכון על  ${score}/${questions.length} שאלות</h2>
                     
