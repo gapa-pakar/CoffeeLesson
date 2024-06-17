@@ -152,7 +152,8 @@ ul li input:checked + label {
 }
 
 .slist li:hover {
-  border: 2px solid #3b220e;
+  /* border: 2px solid #3b220e; */
+  background-color: white;
   /* background: #feffb4; */
   /* color: #c7b0c3; */
 }

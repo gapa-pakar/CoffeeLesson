@@ -174,7 +174,7 @@ h1 {
 
 @media screen and (max-width: 600px) {
   body {
-    background: #8bfff4;
+    /* background: #8bfff4; */
   }
   .timeline {
     ul {

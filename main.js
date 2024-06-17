@@ -246,11 +246,11 @@ let finishQuiz;
 // book page variables
 let idArrayPage1 = ["1", "2", "3", "4"]
 let si;
-let z;
+let z = 1;
 let right;
-let page;
+let page = 0;
 let addNext;
-let add;
+let add = 0;
 
 // scroll page variables
 var items;
@@ -276,9 +276,9 @@ window.addEventListener("load", () => {
     // book variables
     right = document.getElementsByClassName("right");
     si = right.length;
-    z=1;
-    page = 0;
-    add = 0;
+    // z=1;
+    // page = 0;
+    // add = 0;
 });
 
 var page0 = () => {
@@ -321,6 +321,24 @@ var page4 = () => {
     // turnLeft();
     idArrayPage1 = ["9", "10", "11"]
    
+    // addind book elements to screen
+    // for (let i = 0; i < 3; i++) {
+    //     let div = document.createElement("div");
+    //     div.setAttribute("class", "right");
+    //     document.getElementById("container").appendChild(div);
+    //     let figureBack = document.createElement("figure");
+    //     figureBack.setAttribute("class", "back");
+    //     let figureCover = document.createElement("figure");
+    //     figureCover.setAttribute("class", "front");
+    //     if (i === 0) {
+    //         figureBack.setAttribute("id", "back-cover");
+    //     } else if (i === 2) {
+    //         figureCover.setAttribute("id", "cover");
+    //     }
+    //     div.append(figureBack, figureCover);
+    // }
+
+    console.log(document.getElementById("book-section"))
     
     // addContent(page4Content)
     for (let i = 1; i <=3; i++) {
@@ -468,6 +486,7 @@ var page6 = () => {
             // p.innerText = objects[0].p;
             // div.append(h1, p);
         }
+        document.getElementById("arrows").style.visibility = "hidden";
     }
     
     //console.log(document.getElementById("scroll"))
@@ -784,6 +803,9 @@ function isElementInViewport(el) {
 }
 
 function callbackFunc() {
+    if (window.pageYOffset + window.innerHeight >= document.body.scrollHeight) {
+        document.getElementById("arrows").style.visibility = "visible";
+    }
     once = 1;
     for (var i = 0; i < items.length; i++) {   
       if (isElementInViewport(items[i])) {
@@ -799,6 +821,7 @@ function callbackFunc() {
 // book page functions
 function turnRight()
     {
+       
         // if (page !== 3 && add === 0) {
         //     document.getElementById("next-page").style.visibility = "hidden";
         // } else {
@@ -806,6 +829,7 @@ function turnRight()
         //     add = 1;
         // }
         page++;
+        console.log(page)
         if (page === 1) {
             document.getElementById("previous").style.visibility = "visible";
         } else if (page === 3) {
@@ -829,10 +853,17 @@ function turnRight()
         right[si].classList.add("flip");
         z++;
         right[si].style.zIndex=z;
+        console.log("button")
+        document.getElementById("next").style.backgroundColor = "blue";
+        document.getElementById("next").disabled = true;
+        setTimeout(() => {
+            document.getElementById("next").disabled = false;
+        }, 350)
     }
     function turnLeft()
     {
         page--;
+        console.log("previous" + page)
         if (page === 0) {
             document.getElementById("previous").style.visibility = "hidden";
         } else if (page === 2) {
@@ -852,6 +883,11 @@ function turnRight()
         }
         right[si-1].className="right";
         setTimeout(function(){right[si-1].style.zIndex="auto";},350);
+
+        document.getElementById("previous").disabled = true;
+        setTimeout(() => {
+            document.getElementById("previous").disabled = false;
+        }, 350)
         
     }
 
