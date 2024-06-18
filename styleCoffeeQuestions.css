@@ -1,6 +1,5 @@
 
 
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap"); */
 /* css for quiz questions */
 :root {
   --accent-color: #c7b0c3;
@@ -11,14 +10,11 @@
 }
 
 .class {
-  /* background-color: #eee; */
-  /* font-family: "Poppins", sans-serif; */
   font-size: 1.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  /* overflow: hidden; */
   margin: 0;
   position: relative;
   top: -4.8rem;
@@ -26,11 +22,10 @@
 
 .quiz-container {
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  width: 650px;
+  width: 40.64rem;
   padding: 4rem;
-  /* direction: rtl; */
 }
 
 .loading-bar {
@@ -75,16 +70,16 @@ ul li label {
   color: #3b220e;
   direction: rtl;
   width: 100%;
-  padding: 10px 20px;
-  border-radius: 50px;
+  padding: 0.63rem 1.25rem;
+  border-radius: 3.14rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   transition: 0.1s ease;
   
 }
 
 ul li input:hover + label {
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+  rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
 ul li input:checked + label {
@@ -116,7 +111,6 @@ ul li input:checked + label {
 
 
 /* css for sorting events question */
-
 .sortlist {
   position: relative;
   top: 4.8rem;
@@ -163,8 +157,6 @@ ul li input:checked + label {
   background: white;
 }
 
-
-
 /* (B) DRAG-AND-DROP HINT */
 /* .slist li.hint {
   border: 1px solid #c7b0c3;
@@ -175,6 +167,5 @@ ul li input:checked + label {
   background: #ffe7e7;
 } */
 a {
-  /* font-family: sans-serif; */
   margin-top: 30px;
 }

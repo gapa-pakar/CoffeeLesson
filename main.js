@@ -1,9 +1,9 @@
 
 let pageCount;
 let nextPageCount;
-let page1Content = ["קפה הוא שם כולל למספר משקאות חמים וקרים, המופקים מפולי צמח הקפה.", "התמציות מופקות מן הפולים על ידי קלייתם וטחינתם של הפולים,", "וחליטה או בישול של האבקה המתקבלת במים.", "משקאות הקפה ידועים כמעוררים, בעיקר בגלל הקפאין המצוי בפולים."]
-let page2Content = ["קפה הוא אחד המשקאות הפופולריים ביותר בעולם.\nמדובר במשקה שבכל שנה צורכים ממנו תושבי כדור הארץ לא פחות מ-400 מיליארד כוסות.", "המשקה אהוב במיוחד בארצות הברית- הצרכנית הגדולה ביותר בעולם של קפה. 350 מיליון כוסות קפה נלגמות בארצות הברית מדי יום."]
-let page3Content = ["הסברה המרכזית היא כי מקור השם הוא במילה הערבית ״קהוה״. פירושה המקורי של המילה היה יין, אך המילה קיבלה משמעות חדשה עם השנים - קפה.", "קיימת סברה לפיה מקור המילה קפה הוא מהשורש ״כהה״ בעברית.", "מקור אפשרי נוסף לשם קפה הוא בממלכת קאפה שבאתיופיה, שהיא כנראה מקורו של צמח הקפה."]
+let page1Content = ["קפה הוא שם כולל למספר משקאות חמים וקרים, המופקים מפולי צמח הקפה.", "התמציות מופקות מן הפולים על ידי קלייתם וטחינתם של הפולים,", "וחליטה או בישול של האבקה המתקבלת במים.", "משקאות הקפה ידועים כמעוררים, בעיקר בגלל הקפאין המצוי בפולים."];
+let page2Content = ["קפה הוא אחד המשקאות הפופולריים ביותר בעולם.\nמדובר במשקה שבכל שנה צורכים ממנו תושבי כדור הארץ לא פחות מ-400 מיליארד כוסות.", "המשקה אהוב במיוחד בארצות הברית- הצרכנית הגדולה ביותר בעולם של קפה. 350 מיליון כוסות קפה נלגמות בארצות הברית מדי יום."];
+let page3Content = ["הסברה המרכזית היא כי מקור השם הוא במילה הערבית ״קהוה״. פירושה המקורי של המילה היה יין, אך המילה קיבלה משמעות חדשה עם השנים - קפה.", "קיימת סברה לפיה מקור המילה קפה הוא מהשורש ״כהה״ בעברית.", "מקור אפשרי נוסף לשם קפה הוא בממלכת קאפה שבאתיופיה, שהיא כנראה מקורו של צמח הקפה."];
 let page3Contentall = [
     {
        "line1": "הסברה המרכזית היא כי מקור השם הוא במילה הערבית ״קהוה״. פירושה המקורי של המילה היה יין, אך המילה קיבלה משמעות חדשה עם השנים - קפה.", 
@@ -40,11 +40,11 @@ let page3Contentall = [
       "title14": "במהרה הפכו ברזיל וקולומביה למעצמות קפה עולמיות",
     }]
 
-let page4Content = ["האגדה הנפוצה ביותר על גילוי הקפה מתרחשת בשנת 800 לפני הספירה ומספרת על רועה עיזים אתיופי בשם חאלדי.\n\n\n\n\n\n\n\n\n העיזים של חאלדי בדרך כלל רגועות ונינוחות.\n יום אחד, חאלדי הבחין שכשהעיזים שלו אוכלות מגרגירי יער אדומים של שיח מסוים, הן הופכות לאנרגטיות וחסרות מנוחה.", ".חאלדי ניסה בעצמו לאכול את הגרגירים הללו, וכאשר טעם מהם הרגיש את ההשפעה בעצמו. נרגש מהתגלית המוזרה, הוא הביא כמה גרגירים לנזיר בכפר שלו והסביר לו את שהתרחש. הנזיר קבע כי הגרגירים הם ״עבודת השטן״ והשליך אותם לאש הסמוכה. כך למעשה התרחשה קליית הקפה הראשונה", "זמן קצר לאחר מכן, עלתה ארומה עוצמתית מן האש ומלאה את החדר בו נכחו חאלדי והנזיר. על מנת לשמר את הארומה, הנזיר הורה להוציא את הגרגירים מן האש ולשפוך עליהם מים, וכך נוצרה כוס הקפה הראשונה."]
+let page4Content = ["האגדה הנפוצה ביותר על גילוי הקפה מתרחשת בשנת 800 לפני הספירה ומספרת על רועה עיזים אתיופי בשם חאלדי.\n\n\n\n\n\n\n\n\n העיזים של חאלדי בדרך כלל רגועות ונינוחות.\n יום אחד, חאלדי הבחין שכשהעיזים שלו אוכלות מגרגירי יער אדומים של שיח מסוים, הן הופכות לאנרגטיות וחסרות מנוחה.", ".חאלדי ניסה בעצמו לאכול את הגרגירים הללו, וכאשר טעם מהם הרגיש את ההשפעה בעצמו. נרגש מהתגלית המוזרה, הוא הביא כמה גרגירים לנזיר בכפר שלו והסביר לו את שהתרחש. הנזיר קבע כי הגרגירים הם ״עבודת השטן״ והשליך אותם לאש הסמוכה. כך למעשה התרחשה קליית הקפה הראשונה", "זמן קצר לאחר מכן, עלתה ארומה עוצמתית מן האש ומלאה את החדר בו נכחו חאלדי והנזיר. על מנת לשמר את הארומה, הנזיר הורה להוציא את הגרגירים מן האש ולשפוך עליהם מים, וכך נוצרה כוס הקפה הראשונה."];
 
-let page5Content = ["חאלידי מראה את הפרי לנזיר שלו", "הנזיר מורה להוציא את הפולים מהאש ולשפוך עליהם מים", "חאלידי רועה הצאן מבחין כי הכבשים שלו אנרגטיות", "חאלידי מבין כי הכבשים אכלו מפרי אדום", "הנזיר זורק את הפולים לאש", "חאלידי טועם מהפרי וחש אנרגטי"]
+let page5Content = ["חאלידי מראה את הפרי לנזיר שלו", "הנזיר מורה להוציא את הפולים מהאש ולשפוך עליהם מים", "חאלידי רועה הצאן מבחין כי הכבשים שלו אנרגטיות", "חאלידי מבין כי הכבשים אכלו מפרי אדום", "הנזיר זורק את הפולים לאש", "חאלידי טועם מהפרי וחש אנרגטי"];
 
-let page6Content = ["התפשטות הקפה בעולם מתחילה מאתיופיה", "האתיופים מתחילים למכור את פולי הקפה לסוחרים ערביים שמפיצים את הפולים במדינות ערב של העולם העתיק.", "בתימן עודדו שתיית קפה מרובה על מנת לצמצם את תופעת לעיסת הגת.", "בארצות ערב חכמי הדת ניסו למנוע תחילה מהמאמינים לשתות קפה, אך ללא הצלחה.", "בתי הקפה הראשונים בעולם הוקמו במכה. המשקה התפשט ברחבי מדינות ערב אך היה מוכר במיוחד במקומות בהם היו נהוגים משחקי קוביות, רכילויות, ריקודים ושירה.", "בשלב מסוים בתי הקפה נהפכו במהרה למרכזים פוליטיים פעילים נגד הממשל ובשל כך חלק מהם הוצאו אל מחוץ לחוק.", "למדינות ערב הייתה מדיניות חד משמעית- איסור ייצוא פולי קפה בכדי שהקפה לא יגדל בשום מקום אחר בעולם ויישאר בלעדי לאזורם.", "צעד זה יצר כמיהה למשקה ופתח במרוץ להשגת זרעים.", "הסברה היא שאיטליה היא הארץ האירופאית הראשונה שהצליחה להשיג פולי קפה, כנראה על ידי סוחרים ונציאנים שביקרו במזרח התיכון.", "מאוחר יותר, במאה ה-16 וה-17, גם הולנד וצרפת הצליחו להשיג אותו.", "במאה ה-18 פולי הקפה הגיעו גם לאמריקה, כאשר סוחר צרפתי הביא עימו כמה שתילים לאחד מהאיים הקריביים.", "באדמה הפוריה ובאקלים הטרופי הצמחים התפתחו ושגשגו היטב, ותוך שנים אחדות השתילים הבודדים הפכו למטעים רחבים.", "כובשי אמריקה האירופאים הביאו עימם זרעים של צמח הקפה לאזורים שונים בדרום אמריקה, וכך הם החלו את חקלאות הקפה.", "במהרה הפכו ברזיל וקולומביה למעצמות קפה עולמיות"]
+let page6Content = ["התפשטות הקפה בעולם מתחילה מאתיופיה", "האתיופים מתחילים למכור את פולי הקפה לסוחרים ערביים שמפיצים את הפולים במדינות ערב של העולם העתיק.", "בתימן עודדו שתיית קפה מרובה על מנת לצמצם את תופעת לעיסת הגת.", "בארצות ערב חכמי הדת ניסו למנוע תחילה מהמאמינים לשתות קפה, אך ללא הצלחה.", "בתי הקפה הראשונים בעולם הוקמו במכה. המשקה התפשט ברחבי מדינות ערב אך היה מוכר במיוחד במקומות בהם היו נהוגים משחקי קוביות, רכילויות, ריקודים ושירה.", "בשלב מסוים בתי הקפה נהפכו במהרה למרכזים פוליטיים פעילים נגד הממשל ובשל כך חלק מהם הוצאו אל מחוץ לחוק.", "למדינות ערב הייתה מדיניות חד משמעית- איסור ייצוא פולי קפה בכדי שהקפה לא יגדל בשום מקום אחר בעולם ויישאר בלעדי לאזורם.", "צעד זה יצר כמיהה למשקה ופתח במרוץ להשגת זרעים.", "הסברה היא שאיטליה היא הארץ האירופאית הראשונה שהצליחה להשיג פולי קפה, כנראה על ידי סוחרים ונציאנים שביקרו במזרח התיכון.", "מאוחר יותר, במאה ה-16 וה-17, גם הולנד וצרפת הצליחו להשיג אותו.", "במאה ה-18 פולי הקפה הגיעו גם לאמריקה, כאשר סוחר צרפתי הביא עימו כמה שתילים לאחד מהאיים הקריביים.", "באדמה הפוריה ובאקלים הטרופי הצמחים התפתחו ושגשגו היטב, ותוך שנים אחדות השתילים הבודדים הפכו למטעים רחבים.", "כובשי אמריקה האירופאים הביאו עימם זרעים של צמח הקפה לאזורים שונים בדרום אמריקה, וכך הם החלו את חקלאות הקפה.", "במהרה הפכו ברזיל וקולומביה למעצמות קפה עולמיות"];
 
 const quizData = [
     {
@@ -143,16 +143,16 @@ const quizData2 = [
     }
 ];
 
-let page8Content = ["ישנם זנים רבים של קפה, אולם בעיקר שניים משמשים למשקאות קפה:", "ואילו השאר משמשים בעיקר לתעשיות הקוסמטיקה."]
+let page8Content = ["ישנם זנים רבים של קפה, אולם בעיקר שניים משמשים למשקאות קפה:", "ואילו השאר משמשים בעיקר לתעשיות הקוסמטיקה."];
 let coffeeKindsContent = [
     ["ההנחה המקובלת היא כי קפה הערביקה הוא מין הקפה הראשון שתורבת,\n והוא גודל בדרום מערב חצי האי ערב עוד לפני 1,000 שנים.", "במקור, הערביקה גדל באזורי ההרים של אתיופיה. כיום קשה למצוא שם גידולים שצמחו פרא\n ורוב הגידולים הם ערבוב של עצים שגדלו פרא ועצים שניטעו.", "הצורה הנפוצה היא שיחים צפופים.\n כמו כן, ניתן למצוא ערביקה בדרום סודאן והר מרסביט בצפון קניה."],
     ["קפה רובוסטה הוא מין בסוג קפה שמקורו ממערב אפריקה. את קפה הרובוסטה מגדלים בעיקר\n באפריקה ובברזיל בגבהים שבין 200 ל-800 מטרים, וכן בדרום מזרח אסיה במקומות אליהם הביאו\n הצרפתים את הצמח בסוף המאה ה-19.", "במהלך שנות ה-2000 הפכה וייטנאם ליצואנית הגדולה ביותר בעולם של זן הרובוסטה.\n כשליש מן הקפה המיוצר בעולם הוא מסוג רובוסטה."]
-]
+];
 
 let page9Content = [
     ["ניתן להכין ממנו קפה משובח יותר", "מכיל פחות קפאין", "מתאפיין בטעמים מתוקים יותר,\n קרמה יחסית נמוכה, מרירות עדינה", "צורת הפולים שטוחה וארוכה וצבעם ירוק עמוק", "רגיש מאוד לכפור, דבר שמקשה מאוד על גידולו\n ועקב כך מחירו גבוה"],
     ["פחות איכותי לייצור משקה הקפה", "כמות קפאין גבוהה - בין 2 ל-4.5 אחוזים", "ניחן במרירות ובקרמה עבה, מריר, פשוט, ומשמש\n לרוב לחיזוק תערובות קפה ולהגברת הקרמה\n באספרסו.", "צורת הפולים היא קמורה ועגולה, וצבעם ירוק בהיר", "סביל לתנאי חליטה לא אופטימליים, זול יותר"]
-]
+];
 
 let page11Content = [
     {
@@ -195,23 +195,24 @@ let page11Content = [
         content: "מוקה הוא משקה של אספרסו (שליש), חלב מורתח (שני שלישים) ומעט קקאו או סירופ שוקולד. השם מוקה נגזר מעיר הנמל מוח'א שבתימן, שהייתה מרכז סחר בקפה מהמאה ה-15 עד המאה ה-17. בשם זה מכונה זן צמח הקפה שמקורו באזור מוח'א, שטעמו דומה לקפה עם שוקולד. הגרסה המודרנית מחקה אותו באמצעות זני קפה אחרים שמוסיפים להם קקאו.",
         highlight: ["משקה של אספרסו", "חלב מורתח", "ומעט קקאו או סירופ שוקולד"]
     }
-]
+];
+
+// let blackCoffee;
 
 
-
-let blackCoffee;
-
+// variables
 let check1 = 0;
 let check2 = 0;
 let coffeeTitle = ["קפה ערביקה", "קפה רובוסטה"];
 let contentCheck;
+
+// makes sure that the elements will be added to the screen once
 let iconsCheck = 0;
 let page5Once = 0;
 let page9Once = 0;
 let page11Once = 0;
 // checks if the arrows needs to be visible
 let quizCheck = 0;
-
 
 // quiz variables
 let quiz;
@@ -241,23 +242,25 @@ let questions;
 let sortingArray = ["first", "second", "third", "fourth", "fifth", "sixth"];
 let mixedArray = ["fourth", "sixth", "first", "second","fifth", "third"];
 let sortingArray1 = [];
-let finishQuiz;
+// let finishQuiz;
 
 // book page variables
-let idArrayPage1 = ["1", "2", "3", "4"]
+let idArrayPage1 = ["1", "2", "3", "4"];
 let si;
 let z = 1;
 let right;
 let page = 0;
 let addNext;
 let add = 0;
+let backIdArray = ["", "", "title9"];
+let coverIdArray = ["title11", "title10", ""];
 
 // scroll page variables
 var items;
 let cardsClass;
 let once = 0;
 
-//
+// coffee kinds page variables
 let coffee_name;
 let coffee_filling;
 let buttons;
@@ -267,18 +270,11 @@ let coffeeArray = [];
 window.addEventListener("load", () => {
     pageCount = 0;
     nextPageCount = 0;
-    
-    // document.getElementById("start-button").addEventListener("click", page1);
-    // console.log(event.target)
     document.addEventListener("click", changePages);
-    //console.log(pageCount);
 
     // book variables
     right = document.getElementsByClassName("right");
     si = right.length;
-    // z=1;
-    // page = 0;
-    // add = 0;
 });
 
 var page0 = () => {
@@ -286,75 +282,70 @@ var page0 = () => {
 }
 
 var page1 = () => {
-    //console.log("g")
-    idArrayPage1 = ["1", "2", "3", "4"]
+    idArrayPage1 = ["1", "2", "3", "4"];
     document.getElementById("arrows").style.visibility = "visible";
-    //console.log("g")
     addContent(page1Content);
 }
 
 var page2 = () => {
-    idArrayPage1 = ["5", "6"]
+    idArrayPage1 = ["5", "6"];
     addContent(page2Content);
 }
 
 var page3 = () => {
-    idArrayPage1 = ["7", "8", "9"]
+    idArrayPage1 = ["7", "8", "9"];
     if (iconsCheck === 0) {
         for (let i = 1; i <= 3; i++) {
             const icon = document.createElement("img");
             document.getElementById("icon-page3").appendChild(icon);
             icon.setAttribute("src", `assets/media/historyPage/icon${i}.png`);
-            icon.setAttribute("style", `padding-bottom: 4rem;`)
-            //console.log(document.getElementById("icon-page3"))
+            icon.setAttribute("style", `padding-bottom: 4rem;`);
         }
 
         // makes sure that the function won't add the icons if they are already on the screen.
         iconsCheck = 1;
     }
-   
-    // addContent(page3Content);
 }
 
 var page4 = () => {
-    // turnRight();
-    // turnLeft();
-    idArrayPage1 = ["9", "10", "11"]
+    idArrayPage1 = ["9", "10", "11"];
    
-    // addind book elements to screen
-    // for (let i = 0; i < 3; i++) {
-    //     let div = document.createElement("div");
-    //     div.setAttribute("class", "right");
-    //     document.getElementById("container").appendChild(div);
-    //     let figureBack = document.createElement("figure");
-    //     figureBack.setAttribute("class", "back");
-    //     let figureCover = document.createElement("figure");
-    //     figureCover.setAttribute("class", "front");
-    //     if (i === 0) {
-    //         figureBack.setAttribute("id", "back-cover");
-    //     } else if (i === 2) {
-    //         figureCover.setAttribute("id", "cover");
-    //     }
-    //     div.append(figureBack, figureCover);
-    // }
-
-    console.log(document.getElementById("book-section"))
+    // adding the book elements to the screen
+    for (let i = 0; i < 3; i++) {
+        let div = document.createElement("div");
+        div.setAttribute("class", "right");
+        document.getElementById("container").appendChild(div);
+        let figureBack = document.createElement("figure");
+        figureBack.setAttribute("class", "back");
+        let div1 = document.createElement("div");
+        div1.setAttribute("id", `${backIdArray[i]}`);
+        figureBack.appendChild(div1);
+        let figureCover = document.createElement("figure");
+        figureCover.setAttribute("class", "front");
+        let div2 = document.createElement("div");
+        div2.setAttribute("id", `${coverIdArray[i]}`);
+        figureCover.appendChild(div2);
+        if (i === 0) {
+            figureBack.setAttribute("id", "back-cover");
+        } else if (i === 2) {
+            figureCover.setAttribute("id", "cover");
+            let h1 = document.createElement("h1");
+            h1.innerText = "כיצד מצאו את הקפה?";
+            let p = document.createElement("p");
+            p.innerText = "האגדה על הקפה";
+            let sheep = document.createElement("img");
+            sheep.setAttribute("src", "assets/media/historyPage/sheep.png");
+            sheep.setAttribute("class", "sheep");
+            figureCover.append(h1, p);
+            figureBack.appendChild(sheep);
+        }
+        div.append(figureBack, figureCover);
+    }
     
-    // addContent(page4Content)
+    // adding the content
     for (let i = 1; i <=3; i++) {
         document.getElementById(`title${idArrayPage1[i - 1]}`).innerText = page4Content[i - 1];
     }
-    // if (page !== 0) {
-    //     document.getElementById("previous").style.display = "block";
-    // } else {
-    //     document.getElementById("previous").style.display = "none";
-    // }
-    
-    // if (page !== 3) {
-    //     document.getElementById("next").style.display = "block";
-    // } else {
-    //     document.getElementById("next").style.display = "none";
-    // }
 }
 
 var page5 = () => {
@@ -368,12 +359,10 @@ var page5 = () => {
             li.innerText = `${page5Content[i]}`;
             document.getElementById("sortlist").appendChild(li);
         }
-        document.getElementById("arrows").style.visibility = "hidden"
+        document.getElementById("arrows").style.visibility = "hidden";
         page5Once = 1;
     }
     
-    
-    console.log("g");
     slist(document.getElementById("sortlist"));
 }
 
@@ -429,26 +418,21 @@ function slist (target) {
           i.parentNode.insertBefore(current, i);
         }
       }
-      console.log(current.id);
-      console.log(i);
-      console.log(items);
-      console.log(sortingArray);
+
        for (let l = 0; l < items.length; l++) {
         sortingArray1.push(items[l].id);
-        console.log(sortingArray1);
       }
+
+      // checks if the user sorted the events in the correct order
       if (sortingArray1.toString() === sortingArray.toString()) {
-        console.log("g");
-        // document.getElementById("sortlist").draggable = false;
         for (let i = 0; i < sortingArray.length; i++) {
             document.getElementById(`${sortingArray[i]}`).draggable = false;
             document.getElementById(`${sortingArray[i]}`).style.border = "none";
             document.getElementById(`${sortingArray[i]}`).style.backgroundColor = "green";
         }
         document.getElementById("arrows").style.visibility = "visible";
-        
       } else {
-        console.log(sortingArray1)
+        // resets the user array
         sortingArray1 = [];
       }
     };
@@ -460,36 +444,30 @@ var page6 = () => {
 
     if (once === 0) {
         for (let i = 0; i < 14; i++) {
+            // moving the cards to their left or right position 
             if (cardsClass === undefined || cardsClass === "side-left") {
-                cardsClass = "side-right"
+                cardsClass = "side-right";
             } else {
-                cardsClass = "side-left"
+                cardsClass = "side-left";
             }
-            // let time = document.createElement("time");
-            // time.innerText = objects[0].time;
-            // let div = document.createElement("div");
-            // div.classList.add("discovery");
-            // document.getElementById(`${i + 1}`).classList.add(`${cardsClass}`);
+
+            // adding the cards to the screen
             let listItem = document.createElement("li");
             document.getElementById("item").appendChild(listItem);
             let div = document.createElement("div");
             div.setAttribute("id", `${i + 1}`);
             listItem.appendChild(div);
             let icon = document.createElement("img");
-            icon.setAttribute("src", `assets/media/historyPage/icons/${i + 1}.png`)
+            icon.setAttribute("src", `assets/media/historyPage/icons/${i + 1}.png`);
             icon.classList.add("icon1");
             let h1 = document.createElement("h1");
             h1.innerText = page6Content[i];
             let p = document.createElement("p");
             document.getElementById(`${i + 1}`).classList.add(`${cardsClass}`);
             document.getElementById(`${i + 1}`).append(h1, p, icon);
-            // p.innerText = objects[0].p;
-            // div.append(h1, p);
         }
         document.getElementById("arrows").style.visibility = "hidden";
     }
-    
-    //console.log(document.getElementById("scroll"))
 
     items = document.querySelectorAll(".timeline li");
     window.addEventListener("scroll", callbackFunc);
@@ -514,12 +492,11 @@ var quizQuestions = (quizPage) => {
         document.getElementById("arrows").style.visibility = "hidden";
         quizCheck = quizPage;
     }
-    
-    console.log("quizQuestions")
+
+    // makes sure that the variables match the page
     if (quizPage === 1) {
         add1 = "";
-        questions = quizData;
-        
+        questions = quizData;  
     } else if (quizPage === 2) {
         add1 = 1;
         questions = quizData1
@@ -530,81 +507,67 @@ var quizQuestions = (quizPage) => {
 
     quiz = document.getElementById(`quiz${add1}`);
     answerEls = document.querySelectorAll(`.answer${add1}`);
-    // questionEl = document.getElementById("question");
    
-    console.log("reloading")
     submitBtn = document.getElementById(`submit${add1}`);
     loadingProgress = document.getElementById(`loading-bar-progress${add1}`);
     
     currentQuiz = 0;
     score = 0;
 
-    // if (currentQuiz === 1) {
-    //     console.log("currentQuiz === 1")
-    //     answerEls.forEach((answerEl) => (answerEl.checked = false));
-    // }
-    // answerEls.forEach((answerEl) => (answerEl.checked = false));
     loadQuiz(quizPage);
-    console.log("loadagain")
-    
 
     submitBtn.addEventListener("click", () => {
         
-        answerEls.forEach((answerEl) => {
-            if (answerEl.checked) {
-                submitBtn.disabled = true;
-                answer12 = answerEl.id;
-                const answer = answer12;
-
-                if (answer) {
-                    if (answer === questions[currentQuiz].correct) {
-                        document.getElementById(`${answer}_text`).style.cssText = "border: 2px solid green; background-color: rgb(0, 128, 0, 0.4)";
-                        setTimeout(() => {
-                        document.getElementById(`${answer}_text`).style.cssText = "border: none; background-color: white;";
-                        }, 4000)
-                        score++;
-                    } 
-                    else {
-                        document.getElementById(`${answer}_text`).style.cssText = "border: 2px solid red; background-color: rgb(255, 0, 0, 0.4)";
-                        document.getElementById(`${questions[currentQuiz].correct}_text`).style.cssText = "border: 2px solid green; background-color: rgb(0, 128, 0, 0.4)"
-                        setTimeout(() => {
-                        document.getElementById(`${answer}_text`).style.cssText = "border: none; background-color: white;";
-                        document.getElementById(`${questions[currentQuiz].correct}_text`).style.cssText = "border: none; background-color: white;";
-                        }, 4000)
-                    }
-            
-                    setTimeout(() => {
-                        currentQuiz++;
-                        console.log(currentQuiz)
-                        console.log(questions.length)
-                        loadingProgress.style.width = `${(currentQuiz * 100) / questions.length}%`;
-                        if (currentQuiz < questions.length) {
-                            console.log("if")
-                            
-                        loadQuiz(quizPage);
-                        } else {
-                            document.getElementById("arrows").style.visibility = "visible";
-                        quiz.innerHTML = `
-                                    <h2 class="question"> ענית נכון על  ${score}/${questions.length} שאלות</h2>
-                    
-                                    <button onClick="quizQuestions()" id="realoding">Reload <i class="fa-solid fa-arrows-rotate"></i></button>
-                                `;
+        if (submitBtn.innerText === "צדקתי?") {
+            answerEls.forEach((answerEl) => {
+                if (answerEl.checked) {
+                    submitBtn.disabled = true;
+                    answer12 = answerEl.id;
+                    const answer = answer12;
+    
+                    if (answer) {
+                        if (answer === questions[currentQuiz].correct) {
+                            document.getElementById(`${answer}_text`).style.cssText = "border: 2px solid green; background-color: rgb(0, 128, 0, 0.4)";
+                            score++;
+                        } 
+                        else {
+                            document.getElementById(`${answer}_text`).style.cssText = "border: 2px solid red; background-color: rgb(255, 0, 0, 0.4)";
+                            document.getElementById(`${questions[currentQuiz].correct}_text`).style.cssText = "border: 2px solid green; background-color: rgb(0, 128, 0, 0.4)";
                         }
-                        submitBtn.disabled = false;
-                    }, 4000)
+                    }
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = "הבא";
+                    answerEls.forEach((answerEl) => (answerEl.checked = false));
                 }
-                answerEls.forEach((answerEl) => (answerEl.checked = false));
+            });
+        } else if (submitBtn.innerText === "הבא") {
+            // cleans style
+            document.getElementById(`${answer12}_text`).style.cssText = "border: none; background-color: white;";
+            document.getElementById(`${answer12}_text`).style.cssText = "border: none; background-color: white;";
+            document.getElementById(`${questions[currentQuiz].correct}_text`).style.cssText = "border: none; background-color: white;";
+
+            currentQuiz++;
+            loadingProgress.style.width = `${(currentQuiz * 100) / questions.length}%`;
+            if (currentQuiz < questions.length) {
+                loadQuiz(quizPage);
+            } else {
+                document.getElementById("arrows").style.visibility = "visible";
+                quiz.innerHTML = `
+                        <h2 class="question"> ענית נכון על  ${score}/${questions.length} שאלות</h2>
+                        <button id="realoding">Reload <i class="fa-solid fa-arrows-rotate"></i></button>
+                        `;
+                document.getElementById("realoding").addEventListener("click", window[`page${pageCount}`]());
             }
-        });
-        
+            submitBtn.innerText = "צדקתי?";
+        }
     });
 }
 
 
 var page8 = () => {
-    idArrayPage1 = ["12", "14"]
+    idArrayPage1 = ["12", "14"];
     addContent(page8Content);
-    console.log(document.getElementById("page8"))
+    console.log(document.getElementById("page8"));
     document.body.classList.remove("coffee-background");
     document.getElementById("page8").style.display = "block";
     document.getElementById("coffee-kinds").style.display = "none";
@@ -619,9 +582,8 @@ var page8 = () => {
 }
 
 let coffeeKinds = (event) => {
-    // document.getElementById("page8").classList.add("coffee-kinds");
-    // document.getElementById("")
     let coffeeName;
+    // matches the elements to the page
     if (event.target.id === "robosta") {
         coffeeName = 1;
         check1++;
@@ -630,50 +592,45 @@ let coffeeKinds = (event) => {
         check2++;
     }
     document.getElementById("arrows").style.visibility = "hidden";
-    document.body.classList.add("coffee-background")
-    console.log(coffeeKindsContent[0].length)
-    console.log(coffeeKindsContent[1].length)
+    document.body.classList.add("coffee-background");
 
     document.getElementById("page8").style.display = "none";
     document.getElementById("coffee-kinds").style.display = "block";
-    
    
     document.getElementById("coffee-title").innerText = `${coffeeTitle[coffeeName]}`;
     for (let i = 0; i < coffeeKindsContent[coffeeName].length; i++) {
         let div = document.createElement("div");
-        div.innerText = `${coffeeKindsContent[coffeeName][i]}`
-        div.setAttribute("class", `content-${event.target.id}${i + 1}`)
+        div.innerText = `${coffeeKindsContent[coffeeName][i]}`;
+        div.setAttribute("class", `content-${event.target.id}${i + 1}`);
         let img = document.createElement("img");
-        img.setAttribute("src", `assets/media/coffeKinds/${event.target.id}/icon${i+1}.png`)
-        img.setAttribute("class", `icon-${event.target.id}${i + 1}`)
-        document.getElementById("coffee-content").append(div, img)
-        console.log(document.getElementById("coffee-kinds"));
+        img.setAttribute("src", `assets/media/coffeKinds/${event.target.id}/icon${i+1}.png`);
+        img.setAttribute("class", `icon-${event.target.id}${i + 1}`);
+        document.getElementById("coffee-content").append(div, img);
     }
 
     document.getElementById("back").addEventListener("click", () => {
         document.getElementById("coffee-content").innerHTML = "";
-        console.log("g")
         page8();
     })
 }
 
 var page9 = () => {
+    // adding the elements to the screen
     if (page9Once === 0) {
         for (let i = 0; i < 5; i++) {
             let div1 = document.createElement("div");
-            div1.setAttribute("class", "col1")
-            div1.innerText = `${page9Content[0][i]}`
+            div1.setAttribute("class", "col1");
+            div1.innerText = `${page9Content[0][i]}`;
             document.getElementById("arabica-col").appendChild(div1);
             let div2 = document.createElement("div");
-            div2.setAttribute("class", "col2")
-            div2.innerText = `${page9Content[1][i]}`
+            div2.setAttribute("class", "col2");
+            div2.innerText = `${page9Content[1][i]}`;
             document.getElementById("robosta-col").appendChild(div2);
             console.log(document.getElementById("arabica-col"));
             console.log(document.getElementById("robosta-col"));
         }
         page9Once = 1;
     }
-    
 }
 
 var page10 = () => {
@@ -687,28 +644,21 @@ var page11 = () => {
     if (page11Once === 0) {
         document.getElementById("arrows").style.visibility = "hidden";
     }
-    
-    // document.getElementById("content-page11").innerText = `${page11Content[0].content}`;
-    // page11Content[0].content.every(checkItems)
-    
 
     coffee_name = document.querySelector(".coffee_name");
     coffee_filling = document.querySelector(".filling");
     buttons = document.querySelectorAll("button");
     current_element = null;
     
-    // if (pageCount === 11) {
-        [...buttons].forEach((button) => {
-            button.addEventListener("click", function buttonClick() {
-                changeCoffeeType(button);
-            });
+    [...buttons].forEach((button) => {
+        button.addEventListener("click", function buttonClick() {
+            changeCoffeeType(button);
         });
-    // }
-    
+    });
 }
 
+// coffee types page functions
 let checkItems = (item) => {
-    console.log("g")
     if (page11Content[0].highlight.includes(item)) {
         item.classList.add("add-color");
     }
@@ -719,24 +669,19 @@ const changeCoffeeType = (selected) => {
         current_element.classList.remove("selected");
         coffee_filling.classList.remove(current_element.id);
     }
-    
-    
+  
     current_element = selected;
-
+    // highlights the words in different color
     var samplestring = page11Content[current_element.dataset.indexNumber].content;
-
     const samplearray = page11Content[current_element.dataset.indexNumber].highlight;
 
     samplearray.forEach(str => {
-        samplestring = samplestring.replaceAll(str, `<span>${str}</span>`)
+        samplestring = samplestring.replaceAll(str, `<span>${str}</span>`);
     })
-
     document.getElementById("content-page11").innerHTML = samplestring;
 
-    console.log(current_element.dataset.indexNumber);
     if (!coffeeArray.includes(current_element.id)) {
         coffeeArray.push(current_element.id);
-        console.log(coffeeArray);
         if (coffeeArray.length === 10 && page11Once === 0) {
             document.getElementById("arrows").style.visibility = "visible";
             page11Once = 1;
@@ -746,7 +691,6 @@ const changeCoffeeType = (selected) => {
     coffee_filling.classList.add(current_element.id);
     current_element.classList.add("selected");
     coffee_name.innerText = selected.innerText;
-
 };
 
 const setActiveType = (element) => {
@@ -762,10 +706,10 @@ var page12 = () => {
     quizQuestions(3);
 }
 
-// 
+// loads the quiz questions
 function loadQuiz(quizPage) {
-    if (quizPage === 1) {
-        answerEls.forEach((answerEl) => (answerEl.checked = false));
+    answerEls.forEach((answerEl) => (answerEl.checked = false));
+    if (quizPage === 1) { 
         const currentQuizData = quizData[currentQuiz];
 
         document.getElementById("question").innerText = currentQuizData.question;
@@ -774,12 +718,12 @@ function loadQuiz(quizPage) {
         c_text.innerText = currentQuizData.c;
         d_text.innerText = currentQuizData.d;
     } else if (quizPage === 2) {
-        answerEls.forEach((answerEl) => (answerEl.checked = false));
+        // answerEls.forEach((answerEl) => (answerEl.checked = false));
         const currentQuizData = quizData1[currentQuiz];
         
         document.getElementById("question1").innerText = currentQuizData.question;
     } else if (quizPage === 3) {
-        answerEls.forEach((answerEl) => (answerEl.checked = false));
+        // answerEls.forEach((answerEl) => (answerEl.checked = false));
         const currentQuizData = quizData2[currentQuiz];
 
         document.getElementById("question2").innerText = currentQuizData.question;
@@ -788,7 +732,6 @@ function loadQuiz(quizPage) {
         l_text.innerText = currentQuizData.l;
         m_text.innerText = currentQuizData.m;
     }
-    
 }
 
 // scroll page functions
@@ -819,80 +762,68 @@ function callbackFunc() {
 }
 
 // book page functions
-function turnRight()
-    {
-       
-        // if (page !== 3 && add === 0) {
-        //     document.getElementById("next-page").style.visibility = "hidden";
-        // } else {
-        //     document.getElementById("next-page").style.visibility = "visible";
-        //     add = 1;
-        // }
+function turnRight() {
         page++;
-        console.log(page)
         if (page === 1) {
             document.getElementById("previous").style.visibility = "visible";
         } else if (page === 3) {
             document.getElementById("next").style.visibility = "hidden";
         }
 
-        if(si>=1){
+        if (si >= 1) {
             si--;
-        }
-        else{
-            si=right.length-1;
-            function sttmot(i){
+        } else {
+            si = right.length - 1;
+            function sttmot(i) {
                 setTimeout(function(){right[i].style.zIndex="auto";},300);
             }
-            for(var i=0;i<right.length;i++){
-                right[i].className="right";
+            for (var i = 0; i < right.length; i++) {
+                right[i].className = "right";
                 sttmot(i);
-                z=1;
+                z = 1;
             }
         }
+
         right[si].classList.add("flip");
         z++;
-        right[si].style.zIndex=z;
-        console.log("button")
-        document.getElementById("next").style.backgroundColor = "blue";
+        right[si].style.zIndex = z;
+
+        // makes sure that the button is disabled until the page finishes flip animation
         document.getElementById("next").disabled = true;
         setTimeout(() => {
             document.getElementById("next").disabled = false;
-        }, 350)
+        }, 350);
     }
-    function turnLeft()
-    {
+
+    function turnLeft() {
         page--;
-        console.log("previous" + page)
         if (page === 0) {
             document.getElementById("previous").style.visibility = "hidden";
         } else if (page === 2) {
             document.getElementById("next").style.visibility = "visible";
         }
 
-
-        if(si<right.length){
+        if (si<right.length) {
             si++;
-        }
-        else{
-            si=1;
-            for(var i=right.length-1;i>0;i--){
+        } else {
+            si = 1;
+            for (var i = right.length - 1; i > 0; i--) {
                 right[i].classList.add("flip");
                 right[i].style.zIndex=right.length+1-i;
             }
         }
-        right[si-1].className="right";
+
+        right[si-1].className = "right";
         setTimeout(function(){right[si-1].style.zIndex="auto";},350);
 
+        // makes sure that the button is disabled until the page finishes flip animation
         document.getElementById("previous").disabled = true;
         setTimeout(() => {
             document.getElementById("previous").disabled = false;
-        }, 350)
-        
+        }, 350);
     }
 
 let changePages = (event) => {
-    console.log("g")
     if (event.target.id === "next-page" || event.target.id === "start-button" || event.target.id === "previous-page") {
         document.getElementById(`page${pageCount}`).style.display = "none";
         if (event.target.id === "next-page" || event.target.id === "start-button") {
@@ -903,7 +834,6 @@ let changePages = (event) => {
         document.getElementById(`page${pageCount}`).style.display = "block";
         window[`page${pageCount}`]();
     }
-    
 }
 
 let addContent = (array) => {
@@ -911,10 +841,8 @@ let addContent = (array) => {
         for (let i = 1; i <= array.length; i++) {
             const content = document.createElement("div");
             document.getElementById(`content-page${pageCount}`).appendChild(content);
-            //console.log(document.getElementById(`content-page${pageCount}`));
             content.innerText = array[i - 1];
             content.setAttribute("id", `title${idArrayPage1[i - 1]}`);
-            console.log(idArrayPage1)
         }
     }
 
@@ -922,74 +850,3 @@ let addContent = (array) => {
     contentCheck = array;
 }
 
-// let pages = () => {
-//     document.getElementById("arrows").style.visibility = "visible";
-//     document.getElementById(`page${pageCount}`).style.display = "none";
-//     pageCount++;
-//     document.getElementById(`page${pageCount}`).style.display = "block"; 
-//     page1();
-//     document.getElementById("previous-page").addEventListener("click", nextPage );
-//     document.getElementById("next-page").addEventListener("click", nextPage);
-// }
-
-// let nextPage = (event) => {
-//     console.log(event.currentTarget)
-//     let changeCount;
-//     if (nextPageCount > 2 || nextPageCount === 0) {
-//         changeCount = [pageCount, "subject"] ;
-//     } else {
-//         changeCount = [nextPageCount, "page"];
-//     }
-
-//     console.log(changeCount[0]);
-    
-//     document.getElementById(`${changeCount[1]}${changeCount[0]}`).style.display = "none";
-//     if (event.target.id === "next-page") {
-//         changeCount[0]++;
-//     } else if (event.target.id === "previous-page") {
-//         changeCount[0]--;
-//         if (pageCount === 1) {
-//             document.getElementById("arrows").style.visibility = "hidden";
-//         }
-//     }
-//     document.getElementById(`${changeCount[1]}${changeCount[0]}`).style.display = "block";  
-//     page1();
-// }
-
-// let page1 = () => {
-
-// }
-
-// let addsTitle = () => {
-//     let array;
-//     if (pageCount === 1) {
-//         array = page1Content; 
-//     } else if (pageCount === 2) {
-//         array = page2Content;
-//     }
-
-//     for (let i = 1; i <= array.length; i++) {
-//         const content = document.createElement("div");
-//         document.getElementById(`content-page${pageCount}`).appendChild(content);
-//         console.log(document.getElementById(`content-page${pageCount}`));
-//         content.innerText = array[i - 1];
-//         content.setAttribute("id", `title${i}`);
-//     }
-
-    
-    // else {
-    //     array = 
-    //     for (let i = 1; i <= 4; i++) {
-    //         const content = document.createElement("div");
-    //         document.getElementById("content-page1").appendChild(content);
-    //         console.log(document.getElementById("content-page1"));
-    //         content.innerText = page1Content[i - 1];
-    //         content.setAttribute("id", `title${i}`);
-    //         // document.getElementById(`title${i}`).innerText = page2Content[i - 1];
-    //     }
-    //     for (let i = 1; i <= 2; i++) {
-    //         const content = document.createElement("div")
-    //         document.getElementById|("page2").appendChild(content)
-    //     }
-    // }
-// }

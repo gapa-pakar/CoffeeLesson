@@ -8,11 +8,6 @@
   box-sizing: border-box;
 }
 
-/* @font-face {
-    font-family: Shuneet3-Bold-Regular;
-    src: url("assets/fonts/Shuneet3-Bold-Regular.ttf");
-} */
-
 .scroll {
   font: normal 16px/1.5 'Titillium Web', Shuneet3-Bold-Regular;
   /* background: linear-gradient(54deg, #9164ff, #8bfff4); */
@@ -21,30 +16,27 @@
   padding-bottom: 50px;
   position: relative;
   top: 4rem;
-  /* font-family: Shuneet3-Bold-Regular; */
   color: #3b220e;
   direction: rtl;
-  /* font-size: 1rem; */
-  
 }
 
 .side-right {
-    position: absolute;
-    right: -42rem;
+  position: absolute;
+  right: -42rem;
 }
 
 .side-left {
-    position: absolute;
-    right: 4rem;
+  position: absolute;
+  right: 4rem;
 }
 
 h1 {
-    margin: auto;
+  margin: auto;
 }
 
 .icon1 {
-    position: absolute;
-    top:  -2rem;
+  position: absolute;
+  top:  -2rem;
 }
 
 .timeline {
@@ -104,8 +96,8 @@ h1 {
         .discovery {
           margin-right: 10px;
         }
-        .scientist {
-        }
+        /* .scientist {
+        } */
       }
       &:nth-of-type(odd) {
         > div {
@@ -173,9 +165,9 @@ h1 {
 }
 
 @media screen and (max-width: 600px) {
-  body {
-    /* background: #8bfff4; */
-  }
+  /* body {
+    background: #8bfff4;
+  } */
   .timeline {
     ul {
       li {

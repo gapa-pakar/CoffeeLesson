@@ -1,50 +1,44 @@
 
-/* body{
-    margin:0;
-    background-color: #ffecc6;
-} */
 
-/* @font-face {
-    font-family: Shuneet3-Bold-Regular;
-    src: url("assets/fonts/Shuneet3-Bold-Regular.ttf");
-    direction: rtl;
-} */
 .page4 {
     box-sizing: border-box;
     font-family: Shuneet3-Bold-Regular;
 }
-.book-section{
+
+.book-section {
     height: 100vh;
     width: 100vw;
-    /* padding: 5.8rem 0; */
     text-align: center;
     position: relative;
-    /* border: 2px solid blue; */
 }
-.book-section > .container{
+
+.book-section > .container {
     height: 20rem;
     width: 25rem;
     position: relative;
-    top: 14rem;
+    top: 8rem;
     left: -45rem;
     transform: translateX(-50%);
     border-radius: 2%;
-    margin-bottom: 30px;
-    perspective: 1200px;
+    margin-bottom: 1.88rem;
+    perspective: 75rem;
 }
-.container > .right{
+
+.container > .right {
     position: absolute;
     height: 38rem;
     width: 38rem;
     transition: 0.7s ease-in-out;
     transform-style: preserve-3d;
 }
-.book-section > .container > .right{
+
+.book-section > .container > .right {
     right:0;
     transform-origin: right;
-    border-radius: 10px 0 0 10px;
+    border-radius: 0.63rem 0 0 0.63rem;
 }
-.right > figure.front, .right > figure.back{
+
+.right > figure.front, .right > figure.back {
     margin: 0;
     height: 100%;
     width: 100%;
@@ -57,21 +51,25 @@
     background-color: white;
     overflow: hidden;
 }
-.right > figure.front{
+
+.right > figure.front {
     background-position: right;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 0.63rem 0.63rem 0;
     box-shadow: 2px 2px 15px -2px rgba(0,0,0,0.2);
 }
-.right > figure.back{
+
+.right > figure.back {
     background-position: left;
-    border-radius: 10px 0 0 10px;
+    border-radius: 0.63rem 0 0 0.63rem;
     box-shadow: -2px 2px 15px -2px rgba(0,0,0,0.2);
     transform: rotateY(-180deg);
 }
-.flip{
+
+.flip {
     transform: rotateY(180deg);
 }
-.flip::before{
+
+.flip::before {
     content: "";
     position: absolute;
     top:0;
@@ -79,50 +77,56 @@
     z-index: 10;
     width: 100%;
     height: 100%;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 0.63rem 0.63rem 0;
     /* background-color: rgba(0,0,0,0.1); */
 }
-.book-section > button{
+
+.book-section > button {
     border: 2px solid #ef9f00;
     background-color: transparent;
     color: #ef9f00;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 0.63rem 1.25rem;
+    border-radius: 0.31rem;
     cursor: pointer;
-    margin: 10px;
+    margin: 0.63rem;
     transition: 0.3s ease-in-out;
     position: absolute;
     top: 40rem;
 }
+
 .book-section > button:focus, .book-section > button:active{
     outline: none;
 }
-.book-section > p{
+
+.book-section > p {
     color: rgba(0,0,0,0.7);
-    /* font-family: calibri; */
-    font-size: 24px;
+    font-size: 1.5rem;
 }
-.book-section > p > a{
+
+.book-section > p > a {
     text-decoration: none;
     color: #ef9f00;
 }
-.book-section > button:hover{
+
+.book-section > button:hover {
     background-color: #ef9f00;
     color: #fff;
 }
-.front#cover, .back#back-cover{
+
+.front#cover, .back#back-cover {
     background-color: #ffcb63;
-    /* font-family: calibri; */
     text-align: left;
-    padding: 0 30px;
+    padding: 0 1.88rem;
 }
-.front#cover h1{
+
+.front#cover h1 {
     color: #fff;
     font-size: 3.4rem;
     text-align: center;
     margin-top: 3.4rem;
 }
-.front#cover p{
+
+.front#cover p {
     color: rgba(0,0,0,0.8);
     font-size: 1.4rem;
     text-align: center;
@@ -134,15 +138,17 @@
 
 .next {
     position: absolute;
-    right: 60rem;
-    bottom: 2rem;
-    /* width: 5rem; */
-    /* height: 4rem; */
+    right: 89rem;
+    bottom: -2rem;
+    width: 4rem;
+    height: 2.8rem;
 }
 
 .previous {
     position: absolute;
-    right: 20rem;
-    bottom: 2rem;
+    right: 22rem;
+    bottom: 10.9rem;
+    width: 4rem;
+    height: 2.8rem;
     visibility: hidden;
 }
