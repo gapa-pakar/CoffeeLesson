@@ -141,7 +141,7 @@ ul li input:checked + label {
   /* border-radius: 50px; */
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 8rem;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   cursor: pointer;
 }
 

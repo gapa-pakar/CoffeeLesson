@@ -14,13 +14,17 @@
     src: url("assets/fonts/Petel-Bold.ttf");
 }
 
+html {
+    font-size: calc(0.42vw + 0.42vh + 4px);
+}
+
 body {
     background-color: #fff5e1;  
     overflow: hidden;
     font-family: Shuneet3-Bold-Regular;
     color: #3b220e;
     direction: rtl;
-    font-size: calc(1vh + 1vw + 4px);
+    /* font-size: calc(4vw + 4vh + 4px); */
     z-index: 1;
 }
 
@@ -100,7 +104,7 @@ footer {
     position: absolute;
     font-family: RubikDoodleShadow-Regular;
     color: #3b220e;
-    font-size: 1rem;
+    font-size: 100rem;
     font-weight: 900;
 }
 
@@ -185,6 +189,8 @@ footer {
     text-align: center;
     position: relative;
     top: 14rem;
+    left: 50%;
+    transform: translate(-50%);
     font-family: Petel-Bold;
     color: #471e0d;
 }
@@ -199,8 +205,9 @@ footer {
     font-family: Shuneet3-Bold-Regular;
     border-radius: 10rem;
     position: absolute;
-    right: 50rem;
     top: 30rem;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .start-button:hover {
@@ -214,6 +221,7 @@ footer {
     position: absolute;
     bottom: 2.5rem;
     left: 5rem;
+    width: 26rem;
 }
 
 /* background-page */
@@ -239,37 +247,46 @@ footer {
 .background-graphic {
     position: absolute;
     top: 10rem;
-    right: 20rem;
+    /* right: 20rem; */
+    left: 50%;
+    transform: translate(-50%);
+    width: calc(50vw + 20vh + 80px);
+    /* width: 80rem; */
 }
 
-.content-page1 .content-page2 {
-    font-size: 1.8rem;
+.content-page1, .content-page2 {
+    font-size: 2rem;
+}
+
+.content-page1 {
+    left: 50%;
+    transform: translate(-50%);
 }
       
 #title1 {
     position: absolute;
-    top: 14rem;
-    right: 34rem;
+    top: 8rem;
+    right: -22rem;
     width: 30rem;
     text-align: center;
 }
 
 #title2 {
     position: absolute;
-    top: 20rem;
-    right: 46rem;
+    top: 14rem;
+    right: -10rem;
 }
 
 #title3 {
     position: absolute;
-    top: 36rem;
-    right: 36rem;
+    top: 32rem;
+    right: -20rem;
 }
 
 #title4 {
     position: absolute;
-    top: 42rem;
-    right: 59rem;
+    top: 38rem;
+    right: 2rem;
     width: 26rem;
     text-align: center;
 }
@@ -334,6 +351,7 @@ footer {
     position: absolute;
     right: 34rem;
     top: 12.8rem;
+    font-size: 2rem;
 }
 
 .content3 {
@@ -363,13 +381,21 @@ footer {
     margin-right: 4rem;
     margin-left: 4rem;
     text-align: right;
+    line-height: 2rem;
 }
 
 .sheep {
     width: 9rem;
     position: relative;
-    top: -10rem;
-    right: -4rem;
+    top: 8rem;
+    right: -2rem;
+}
+
+.grass {
+    width: 8rem;
+    position: relative;
+    top: 10rem;
+    right: -2rem;
 }
 
 /* page5 */
@@ -380,21 +406,25 @@ footer {
     width: 100vw;
     height: 100vh;
     display: none;
+    font-size: 2rem;
 }
 
 /* page6 */
 .page6 {
     display: none;
+    font-size: 2rem;
 }
 
 /* page7 */
 .page7 {
     display: none;
+    font-size: 2rem;
 }
 
 /* page8 */
 .page8 {
     display: none;
+    font-size: 2rem;
 }
 
 #title12 {
@@ -427,24 +457,25 @@ footer {
 .square1 {
     border: 5px solid #d9a866;
     color: #d9a866;
-    right: 40rem;
-    background-image: url(assets/media/coffeKinds/arabica/arabica.png);
+    right: 42rem;
+    background-image: url("assets/media/coffeKinds/arabica/arabica.png");
 }
 
 .square2 {
     border: 5px solid #9d5c2d;
     color: #9d5c2d;
-    right: 62rem;
-    background-image: url(assets/media/coffeKinds/robosta/robosta.png);
+    right: 64rem;
+    background-image: url("assets/media/coffeKinds/robosta/robosta.png");
 }
 
 .coffee-background {
     background-color: #e0c7a6;
-    background-image: url(assets/media/coffeKinds/chocolate1.png);
+    background-image: url("assets/media/coffeKinds/chocolate1.png");
     background-repeat: no-repeat;
     background-position: -3.5rem -0rem;
     width: 100vw;
     height: 100vh;
+    font-size: 2rem;
 }
 
 .coffee-kinds {
@@ -462,13 +493,14 @@ footer {
 #back {
     position: absolute;
     /* width: 5rem; */
-    margin-top: 50.4rem;
+    margin-top: 50rem;
     right: 3rem;
     cursor: pointer;
 }
 
 .content-arabica1, .content-arabica2, .content-arabica3, .content-robosta1, .content-robosta2{
     line-height: 1.5;
+    font-size: 2rem;
 }
 
 .content-arabica1 {
@@ -533,7 +565,7 @@ footer {
 
 /* page9 */
 .page9 {
-    background-image: url(assets/media/coffeKinds/background2.png);
+    background-image: url("assets/media/coffeKinds/background2.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100vw;
@@ -556,6 +588,7 @@ footer {
     justify-content: space-between;
     margin: 0rem 4rem;
     font-family: Petel-Bold;
+    font-size: 2rem;
 }
 
 .tables {
@@ -614,6 +647,7 @@ footer {
     right: 72rem;
     width: 44rem;
     line-height: 1.5;
+    font-size: 2rem;
 }
 
 span {

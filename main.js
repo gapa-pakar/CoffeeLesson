@@ -12,7 +12,7 @@ let page3Contentall = [
     },
     {
         "content1": "האגדה הנפוצה ביותר על גילוי הקפה מתרחשת בשנת 800 לפני הספירה ומספרת על רועה עיזים אתיופי בשם חאלדי. העיזים של חאלדי בדרך כלל רגועות ונינוחות. יום אחד, חאלדי הבחין שכשהעיזים שלו אוכלות מגרגירי יער אדומים של שיח מסוים, הן הופכות לאנרגטיות וחסרות מנוחה. חאלדי ניסה בעצמו לאכול את הגרגירים הללו, וכאשר טעם מהם הרגיש את ההשפעה בעצמו.",
-        "content2": "נרגש מהתגלית המוזרה, הוא הביא כמה גרגירים לנזיר בכפר שלו והסביר לו את שהתרחש. הנזיר קבע כי הגרגירים הם ״עבודת השטן״ והשליך אותם לאש הסמוכה. כך למעשה התרחשה קליית הקפה הראשונה.",
+        "content2": "נרגש מהתגלית המוזרה, הוא הביא כמה גרגירים לנזיר בכפר שלו והסביר לו את שהתרחש. הנזיר קבע כי הגרגירים הם ״עבודת השטן״ והשליך אותם לאש הסמוכה. כך למעשה התרחשה קליית הקפה הראשונה",
         "content3": "זמן קצר לאחר מכן, עלתה ארומה עוצמתית מן האש ומלאה את החדר בו נכחו חאלדי והנזיר. על מנת לשמר את הארומה, הנזיר הורה להוציא את הגרגירים מן האש ולשפוך עליהם מים, וכך נוצרה כוס הקפה הראשונה."
     },
     {
@@ -40,7 +40,7 @@ let page3Contentall = [
       "title14": "במהרה הפכו ברזיל וקולומביה למעצמות קפה עולמיות",
     }]
 
-let page4Content = ["האגדה הנפוצה ביותר על גילוי הקפה מתרחשת בשנת 800 לפני הספירה ומספרת על רועה עיזים אתיופי בשם חאלדי.\n\n\n\n\n\n\n\n\n העיזים של חאלדי בדרך כלל רגועות ונינוחות.\n יום אחד, חאלדי הבחין שכשהעיזים שלו אוכלות מגרגירי יער אדומים של שיח מסוים, הן הופכות לאנרגטיות וחסרות מנוחה.", ".חאלדי ניסה בעצמו לאכול את הגרגירים הללו, וכאשר טעם מהם הרגיש את ההשפעה בעצמו. נרגש מהתגלית המוזרה, הוא הביא כמה גרגירים לנזיר בכפר שלו והסביר לו את שהתרחש. הנזיר קבע כי הגרגירים הם ״עבודת השטן״ והשליך אותם לאש הסמוכה. כך למעשה התרחשה קליית הקפה הראשונה", "זמן קצר לאחר מכן, עלתה ארומה עוצמתית מן האש ומלאה את החדר בו נכחו חאלדי והנזיר. על מנת לשמר את הארומה, הנזיר הורה להוציא את הגרגירים מן האש ולשפוך עליהם מים, וכך נוצרה כוס הקפה הראשונה."];
+let page4Content = ["האגדה הנפוצה ביותר על גילוי הקפה מתרחשת בשנת 800 לפני הספירה ומספרת על רועה עיזים אתיופי בשם חאלדי. \n\nהעיזים של חאלדי בדרך כלל רגועות ונינוחות.\n יום אחד, חאלדי הבחין שכשהעיזים שלו אוכלות מגרגירי יער אדומים של שיח מסוים, הן הופכות לאנרגטיות וחסרות מנוחה.", "חאלדי ניסה בעצמו לאכול את הגרגירים הללו, וכאשר טעם מהם הרגיש את ההשפעה בעצמו.\n נרגש מהתגלית המוזרה, הוא הביא כמה גרגירים לנזיר בכפר שלו והסביר לו את שהתרחש.\n הנזיר קבע כי הגרגירים הם ״עבודת השטן״ והשליך אותם לאש הסמוכה. כך למעשה התרחשה קליית הקפה הראשונה.", "זמן קצר לאחר מכן, עלתה ארומה עוצמתית מן האש ומלאה את החדר בו נכחו חאלדי והנזיר. על מנת לשמר את הארומה, הנזיר הורה להוציא את הגרגירים מן האש ולשפוך עליהם מים, וכך נוצרה כוס הקפה הראשונה."];
 
 let page5Content = ["חאלידי מראה את הפרי לנזיר שלו", "הנזיר מורה להוציא את הפולים מהאש ולשפוך עליהם מים", "חאלידי רועה הצאן מבחין כי הכבשים שלו אנרגטיות", "חאלידי מבין כי הכבשים אכלו מפרי אדום", "הנזיר זורק את הפולים לאש", "חאלידי טועם מהפרי וחש אנרגטי"];
 
@@ -211,6 +211,9 @@ let iconsCheck = 0;
 let page5Once = 0;
 let page9Once = 0;
 let page11Once = 0;
+let page7Once = 0;
+let page10Once = 0;
+let page12Once = 0;
 // checks if the arrows needs to be visible
 let quizCheck = 0;
 
@@ -237,6 +240,9 @@ let score = 0;
 
 let add1;
 let questions;
+let quizArray = [];
+let quizContentArray = [];
+let reloadQuiz = 0;
 
 // event quiz variables 
 let sortingArray = ["first", "second", "third", "fourth", "fifth", "sixth"];
@@ -336,8 +342,11 @@ var page4 = () => {
             let sheep = document.createElement("img");
             sheep.setAttribute("src", "assets/media/historyPage/sheep.png");
             sheep.setAttribute("class", "sheep");
+            let grass = document.createElement("img");
+            grass.setAttribute("src", "assets/media/historyPage/grass.png");
+            grass.setAttribute("class", "grass");
             figureCover.append(h1, p);
-            figureBack.appendChild(sheep);
+            figureBack.append(sheep, grass);
         }
         div.append(figureBack, figureCover);
     }
@@ -477,13 +486,65 @@ var page6 = () => {
 var page7 = () => {
     window.scrollTo(0,0); 
     document.body.style.overflow = "hidden";
+    if (page7Once === 0 || reloadQuiz !== 0) {
+        quizArray = ["a", "b", "c", "d"];
+        quizContentArray = ["Answer", "Answer", "Answer", "Answer"];
+        addQuizElements("");
 
-    a_text = document.getElementById("a_text");
-    b_text = document.getElementById("b_text");
-    c_text = document.getElementById("c_text");
-    d_text = document.getElementById("d_text");
+        a_text = document.getElementById("a_text");
+        b_text = document.getElementById("b_text");
+        c_text = document.getElementById("c_text");
+        d_text = document.getElementById("d_text");
     
-    quizQuestions(1);
+        quizQuestions(1);
+        page7Once = 1;
+    }
+}
+
+var addQuizElements = (quizPage) => {
+    document.getElementById(`class${quizPage}`).innerHTML = "";
+    reloadQuiz = 0;
+    let quizContainer = document.createElement("div");
+    quizContainer.setAttribute("id", `quiz${quizPage}`);
+    quizContainer.setAttribute("class", "quiz-container");
+    let h2 = document.createElement("h2");
+    h2.setAttribute("id", `question${quizPage}`);
+    h2.setAttribute("class", "question");
+    h2.innerText = "Question";
+    let loadingBar = document.createElement("div");
+    loadingBar.setAttribute("class", "loading-bar");
+    let loadingBarProgress = document.createElement("div");
+    loadingBarProgress.setAttribute("id", `loading-bar-progress${quizPage}`);
+    loadingBarProgress.setAttribute("class", "loading-bar-progress");
+    loadingBar.appendChild(loadingBarProgress);
+    let ul = document.createElement("ul");
+    ul.setAttribute("class", "icon12");
+    for (let i = 0; i < quizArray.length; i++) {
+        let li = document.createElement("li");
+        li.setAttribute("class", "icon14");
+        let input = document.createElement("input");
+        input.setAttribute("type", "radio");
+        // input.type = "radio"
+        input.setAttribute("name", `answer${quizPage}`);
+        input.setAttribute("id", `${quizArray[i]}`);
+        input.setAttribute("class", `answer${quizPage}`);
+        let label = document.createElement("label");
+        label.setAttribute("for", `${quizArray[i]}`);
+        label.setAttribute("id", `${quizArray[i]}_text`);
+        label.innerText = `${quizContentArray[i]}`
+        li.append(input, label);
+        ul.appendChild(li);
+    }
+    let button = document.createElement("button");
+    button.setAttribute("id", `submit${quizPage}`);
+    button.setAttribute("class", "submit");
+    button.innerText = "צדקתי?";
+    let i = document.createElement("i");
+    i.setAttribute("class", "fa-solid fa-chevron-right");
+    button.appendChild(i);
+    quizContainer.append(h2, loadingBar, ul, button);
+    document.getElementById(`class${quizPage}`).appendChild(quizContainer);
+    console.log(document.getElementById(`class${quizPage}`));
 }
 
 var quizQuestions = (quizPage) => {
@@ -556,7 +617,10 @@ var quizQuestions = (quizPage) => {
                         <h2 class="question"> ענית נכון על  ${score}/${questions.length} שאלות</h2>
                         <button id="realoding">Reload <i class="fa-solid fa-arrows-rotate"></i></button>
                         `;
-                document.getElementById("realoding").addEventListener("click", window[`page${pageCount}`]());
+                document.getElementById("realoding").addEventListener("click", () => {
+                    reloadQuiz = 1;
+                    window[`page${pageCount}`]();
+                });
             }
             submitBtn.innerText = "צדקתי?";
         }
@@ -634,10 +698,17 @@ var page9 = () => {
 }
 
 var page10 = () => {
-    h_text = document.getElementById("h_text");
-    i_text = document.getElementById("i_text");
+    if (page10Once === 0 || reloadQuiz !== 0) {
+        quizArray = ["h", "i"];
+        quizContentArray = ["נכון", "לא נכון"];
+        addQuizElements("1");
 
-    quizQuestions(2);
+        h_text = document.getElementById("h_text");
+        i_text = document.getElementById("i_text");
+
+        quizQuestions(2);
+        page10Once = 1;
+    }
 }
 
 var page11 = () => {
@@ -698,12 +769,19 @@ const setActiveType = (element) => {
 };
 
 var page12 = () => {
-    j_text = document.getElementById("j_text");
-    k_text = document.getElementById("k_text");
-    l_text = document.getElementById("l_text");
-    m_text = document.getElementById("m_text");
+    if (page12Once === 0 || reloadQuiz !== 0) {
+        quizArray = ["j", "k", "l", "m"];
+        quizContentArray = ["Answer", "Answer", "Answer", "Answer"];
+        addQuizElements("2");
 
-    quizQuestions(3);
+        j_text = document.getElementById("j_text");
+        k_text = document.getElementById("k_text");
+        l_text = document.getElementById("l_text");
+        m_text = document.getElementById("m_text");
+
+        quizQuestions(3);
+        page12Once = 1;
+    }
 }
 
 // loads the quiz questions
