@@ -428,7 +428,7 @@ footer {
 .page7 {
     display: none;
     font-size: 2rem;
-    position: fixed;
+    /* position: fixed; */
 }
 
 /* page8 */
@@ -647,7 +647,7 @@ footer {
 /* page10 */
 .page10 {
     display: none;
-    position: fixed;
+    /* position: fixed; */
 }
 
 /* page11 */
@@ -672,7 +672,7 @@ span {
 /* page12 */
 .page12 {
     display: none;
-    position: fixed;
+    /* position: fixed; */
 }
 
 footer {
