@@ -197,6 +197,13 @@ let page11Content = [
     }
 ];
 
+let page11CoffeeContent = {
+    id: ["black-coffee", "white-coffee", "filter-coffee", "espresso", "macchiato", "americano", "latte", "capuccino", "cortado", "mocha"],
+    title: ["קפה שחור / קפה טורקי", "קפה תימני / קפה לבן", "קפה פילטר / פרנץ' פרס", "אספרסו", "מקיאטו", "אמריקנו", "לאטה", "קפוצ'ינו", "קורטדו", "מוקה"],
+    class: ["coffee", "water", "liquor", "milk", "whipped_cream", "milk_foam", "steamed_milk", "chocolate"],
+    title1: ["קפה", "מים", "ליקר", "חלב", "קצפת", "חלב מוקצף", "חלב חם", "שוקולד"]
+};
+
 // let blackCoffee;
 
 
@@ -714,6 +721,7 @@ var page10 = () => {
 var page11 = () => {
     if (page11Once === 0) {
         document.getElementById("arrows").style.visibility = "hidden";
+        addElements();
     }
 
     coffee_name = document.querySelector(".coffee_name");
@@ -726,6 +734,38 @@ var page11 = () => {
             changeCoffeeType(button);
         });
     });
+}
+
+var addElements = () => {
+    let options = document.createElement("div");
+    options.setAttribute("class", "options");
+    for (let i = 0; i < page11CoffeeContent.id.length; i++) {
+        let button = document.createElement("button");
+        button.setAttribute("id", `${page11CoffeeContent.id[i]}`);
+        button.setAttribute("data-index-number", `${i}`);
+        button.innerText = `${page11CoffeeContent.title[i]}`;
+        options.appendChild(button);
+    }
+    let container = document.createElement("div");
+    container.setAttribute("class", "container1");
+    let h1 = document.createElement("h1");
+    h1.setAttribute("class", "coffee_name");
+    h1.innerText = "בחרו את הקפה";
+    let cup = document.createElement("div");
+    cup.setAttribute("class", "cup");
+    let filling = document.createElement("div");
+    filling.setAttribute("class", "filling reset");
+    for (let i = 0; i < page11CoffeeContent.class.length; i++) {
+        let div1 = document.createElement("div");
+        div1.setAttribute("class", `${page11CoffeeContent.class[i]}`);
+        div1.innerText = `${page11CoffeeContent.title1[i]}`;
+        filling.appendChild(div1);
+    }
+    let plate = document.createElement("div");
+    plate.setAttribute("class", "plate");
+    cup.append(filling, plate);
+    container.append(h1, cup);
+    document.getElementById("coffee-backgrounds").append(options, container);
 }
 
 // coffee types page functions

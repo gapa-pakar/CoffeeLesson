@@ -321,7 +321,8 @@ footer {
 .world-graphic {
     position: absolute;
     top: 25rem;
-    right: 64rem;
+    right: 60rem;
+    width: calc(20vw + 20vh + 80px);
 }
 
 /* page3 */
