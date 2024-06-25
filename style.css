@@ -300,6 +300,7 @@ footer {
     width: 100vw;
     height: 100vh;
     display: none;
+    position: fixed;
 }
 
 #title5 {
@@ -334,6 +335,7 @@ footer {
     width: 100vw;
     height: 100vh;
     display: none;
+    position: fixed;
 }
 
 .icon-page3 {
@@ -374,6 +376,7 @@ footer {
     width: 100vw;
     height: 100vh;
     display: none;
+    position: fixed;
 }
 
 #title9, #title10, #title11 {
@@ -409,24 +412,28 @@ footer {
     height: 100vh;
     display: none;
     font-size: 2rem;
+    position: fixed;
 }
 
 /* page6 */
 .page6 {
     display: none;
     font-size: 2rem;
+    position: fixed;
 }
 
 /* page7 */
 .page7 {
     display: none;
     font-size: 2rem;
+    position: fixed;
 }
 
 /* page8 */
 .page8 {
     display: none;
     font-size: 2rem;
+    position: fixed;
 }
 
 #title12 {
@@ -573,6 +580,7 @@ footer {
     width: 100vw;
     height: 100vh;
     display: none;
+    position: fixed;
 }
 
 .coffee-icons {
@@ -636,11 +644,13 @@ footer {
 /* page10 */
 .page10 {
     display: none;
+    position: fixed;
 }
 
 /* page11 */
 .page11 {
     display: none;
+    position: fixed;
 }
 
 .content-page11 {
@@ -659,6 +669,7 @@ span {
 /* page12 */
 .page12 {
     display: none;
+    position: fixed;
 }
 
 footer {
