@@ -419,7 +419,7 @@ footer {
 .page6 {
     display: none;
     font-size: 2rem;
-    position: fixed;
+    /* position: fixed; */
 }
 
 /* page7 */
