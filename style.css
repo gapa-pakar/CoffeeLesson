@@ -487,6 +487,7 @@ footer {
     width: 100vw;
     height: 100vh;
     font-size: 2rem;
+    position: fixed;
 }
 
 .coffee-kinds {
@@ -686,6 +687,27 @@ footer {
     z-index: 4;
 }
 
+@media screen and (max-width: 1227px) {
+    #title1, #title2, #title3, #title4 {
+        font-size: 1.6rem;
+        left: 2rem;
+    }
+
+    #title1 {
+        right: -20rem;
+    }
+
+    #title3 {
+        top: 28rem;
+    }
+
+    #title4 {
+        right: -2rem;
+        top: 34rem;
+    }
+    
+}
+
 @media screen and (max-width: 832px) {
     .title {
         font-size: 9rem;
@@ -700,10 +722,245 @@ footer {
         width: 20rem;
         bottom: 10rem;
     }
+
+    .page1 {
+        background-image: none;
+    }
+
+    #title1, #title2, #title3, #title4 {
+        font-size: 1.4rem;
+        left: 2rem;
+    }
+
+    #title1 {
+        right: -15.4rem;
+    }
+
+    #title2 {
+        top: 12.8rem;
+    }
+
+    #title3 {
+        top: 26rem;
+    }
+
+    #title4 {
+        right: -8rem;
+        top: 30rem;
+    }
 }
 
 @media screen and (max-width: 572px) {
     .start-page-graphic {
         visibility: hidden;
+    }
+
+    .background-graphic {
+        width: 38rem;
+    }
+
+    #title1, #title2, #title3, #title4 {
+        font-size: 1.2rem;
+        width: 20rem;
+        text-align: center;
+        right: -10rem;
+    }
+
+    #title1, #title2 {
+        margin-top: 20rem;
+    }
+
+    #title3, #title4 {
+        margin-top: 14rem;
+    }
+
+    #title5, #title6 {
+        font-size: 1.4rem;
+        text-align: center;
+        width: 30rem;
+        right: 6rem;
+        
+    }
+
+    .world-graphic {
+        right: 6rem;
+        top: 40rem;
+    }
+
+    #icon-page3 img {
+        width: 8rem;
+        margin-bottom: 4rem;
+    }
+
+    .icon-page3 {
+        right: 4rem;
+        
+    }
+
+    .content-page3 {
+        font-size: 1.4rem;
+        right: 14rem;
+        width: 20rem;
+    }
+
+    .square1, .square2 {
+        width: 15rem;
+        height: 2rem;
+        top: 20rem;
+        padding-top: 10rem;
+        padding-bottom: 2rem;
+    }
+
+    .square1 {
+        right: 4rem;
+        background-position: 2rem 0rem 0rem 0rem ;
+        background-size: 6rem;
+    }
+
+    .square2 {
+        right: 24rem;
+        background-position: 2rem 0rem 0rem 0rem ;
+        background-size: 6rem;
+    }
+
+    .coffee-background {
+        background-position: -20.5rem 0rem;
+        background-size: 38rem;
+    }
+
+    .coffee-title {
+        right: 6rem;
+    }
+
+    .content-arabica1, .content-arabica2, .content-arabica3, .content-robosta1, .content-robosta2{
+        font-size: 1.8rem;
+    }
+
+    .icon-arabica1, .icon-arabica2, .icon-arabica3, .icon-robosta1, .icon-robosta2 {
+        width: 6rem;
+    }
+
+    .icon-arabica1 {
+        right: 4rem;
+    }
+
+    .icon-arabica2 {
+        right: 36rem;
+        margin-top: 8rem;
+    }
+
+    .icon-arabica3 {
+        right: 6rem;
+        margin-top: 8rem;
+    }
+
+    .icon-robosta1 {
+        right: 4rem;
+        width: 8rem;
+        margin-top: 17.8rem;
+    }
+
+    .icon-robosta2 {
+        right: 34rem;
+        margin-top: 12rem;
+    }
+
+    .content-arabica1 {
+        right: 12rem;
+        width: 30rem;  
+    }
+
+    .content-arabica2 {
+        right: 6rem;
+        width: 32.4rem;
+        margin-top: 4rem; 
+    }
+
+    .content-arabica3 {
+        right: 14rem;
+        width: 26rem;
+        margin-top: 8rem;
+    }
+
+    .content-robosta1 {
+        right: 14rem;
+        width: 26rem;
+    }
+
+    .content-robosta2 {
+        right: 6rem;
+        width: 30rem;
+        margin-top: 8rem;
+    }
+
+    #back {
+        width: 6rem;
+        top: 20rem;
+    }
+
+    .coffee-icons img:first-of-type {
+        width: 6rem;
+        height: 8rem;
+        position: absolute;
+        top: -14rem;
+        right: 4rem;
+        transform: translate(-50%);
+    }
+
+    .coffee-icons img:last-of-type {
+        width: 6rem;
+        height: 8rem;
+        position: absolute;
+        top: -14rem;
+        right: 20rem;
+    }
+
+    .icons-title div:first-of-type {
+        position: absolute;
+        top: -6rem;
+        right: 4rem;
+    }
+
+    .icons-title div:last-of-type {
+        position: absolute;
+        top: -6rem;
+        right: 20rem;
+    }
+
+    .arabica-col {
+        right: 4rem;
+        top: 14.8rem;
+    }
+    
+    .col1, .col2 {
+        width: 17rem;
+        border-radius: 2.9rem;
+        margin-top: 1rem;
+        margin-right: -20rem;
+        font-size: 1.4rem;
+    }
+
+    .col1 {
+        position: relative;
+        top: 4rem;
+        right: 17.8rem;
+        
+    }
+
+    .col2 {
+        position: relative; 
+        top: 10.9rem;
+        right: 17rem;
+    }
+
+    .content-page11 {
+        top: 12rem;
+        right: 14.9rem;
+        font-size: 1.4rem;
+        width: 26rem;
+    }
+
+    .arrow {
+        width: 6rem;
     }
 }
