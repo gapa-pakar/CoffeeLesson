@@ -683,3 +683,25 @@ footer {
     text-align: center;
     z-index: 4;
 }
+
+@media screen and (max-width: 832px) {
+    .title {
+        font-size: 9rem;
+        top: 24rem;
+    }
+
+    .start-button {
+        top: 38rem;
+    }
+
+    .icon {
+        width: 20rem;
+        bottom: 10rem;
+    }
+}
+
+@media screen and (max-width: 572px) {
+    .start-page-graphic {
+        visibility: hidden;
+    }
+}
