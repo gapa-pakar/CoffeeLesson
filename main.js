@@ -391,6 +391,27 @@ function slist (target) {
   for (let i of items) {
     // (B1) ATTACH DRAGGABLE
     i.draggable = true;
+    i.addEventListener('touchmove', function(e) {
+        // grab the location of touch
+        console.log("dragable")
+        var touchLocation = e.targetTouches[0];
+        
+        // assign box new coordinates based on the touch.
+        i.style.left = touchLocation.pageX + 'px';
+        i.style.top = touchLocation.pageY + 'px';
+      })
+      
+      /* record the position of the touch
+      when released using touchend event.
+      This will be the drop position. */
+      
+      i.addEventListener('touchend', function(e) {
+        // current box position.
+        var x = parseInt(i.style.left);
+        var y = parseInt(i.style.top);
+      })
+      
+    
     
     // (B2) DRAG START - YELLOW HIGHLIGHT DROPZONES
     i.ondragstart = (ev) => {
