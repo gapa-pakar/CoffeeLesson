@@ -435,7 +435,7 @@ footer {
 .page8 {
     display: none;
     font-size: 2rem;
-    position: fixed;
+    /* position: fixed; */
 }
 
 #title12 {

@@ -216,6 +216,7 @@ let contentCheck;
 // makes sure that the elements will be added to the screen once
 let iconsCheck = 0;
 let page5Once = 0;
+let page8Once = 0;
 let page9Once = 0;
 let page11Once = 0;
 let page7Once = 0;
@@ -551,11 +552,9 @@ var addQuizElements = (quizPage) => {
     button.appendChild(i);
     quizContainer.append(h2, loadingBar, ul, button);
     document.getElementById(`class${quizPage}`).appendChild(quizContainer);
-    console.log(document.getElementById(`class${quizPage}`));
 }
 
 var quizQuestions = (quizPage) => {
-
     if (quizCheck !== quizPage) {
         document.getElementById("arrows").style.visibility = "hidden";
         quizCheck = quizPage;
@@ -584,8 +583,7 @@ var quizQuestions = (quizPage) => {
 
     loadQuiz(quizPage);
 
-    submitBtn.addEventListener("click", () => {
-        
+    submitBtn.addEventListener("click", () => {  
         if (submitBtn.innerText === "צדקתי?") {
             answerEls.forEach((answerEl) => {
                 if (answerEl.checked) {
@@ -637,8 +635,9 @@ var quizQuestions = (quizPage) => {
 
 var page8 = () => {
     idArrayPage1 = ["12", "14"];
-    addContent(page8Content);
-    console.log(document.getElementById("page8"));
+    if (page8Once === 0) {
+        addContent(page8Content);
+    }
     document.body.classList.remove("coffee-background");
     document.getElementById("page8").style.display = "block";
     document.getElementById("coffee-kinds").style.display = "none";
@@ -697,8 +696,6 @@ var page9 = () => {
             div2.setAttribute("class", "col2");
             div2.innerText = `${page9Content[1][i]}`;
             document.getElementById("robosta-col").appendChild(div2);
-            console.log(document.getElementById("arabica-col"));
-            console.log(document.getElementById("robosta-col"));
         }
         page9Once = 1;
     }
