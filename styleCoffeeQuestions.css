@@ -118,11 +118,11 @@ ul li input:checked + label {
   height: 0;
   background: transparent;
   border: 2px solid transparent;
-  border-radius: 2rem;
+  /* border-radius: 2rem; */
 }
 
 #reloading:hover::before {
-  border-radius: 2rem;
+  /* border-radius: 2rem; */
   animation: animate 1s linear forwards;
 }
 
@@ -134,7 +134,7 @@ ul li input:checked + label {
       border-right-color: transparent;
       border-bottom-color: transparent;
       border-left-color: transparent;
-      border-radius: 2rem;
+      /* border-radius: 2rem; */
   }
 
   50% {
@@ -144,7 +144,7 @@ ul li input:checked + label {
       border-right-color: #c7b0c3;
       border-bottom-color: transparent;
       border-left-color: transparent;
-      border-radius: 2rem;
+      /* border-radius: 2rem; */
   }
 
   100% {
@@ -154,7 +154,7 @@ ul li input:checked + label {
       border-right-color: #c7b0c3;
       border-bottom-color: transparent;
       border-left-color: transparent;
-      border-radius: 2rem;
+      /* border-radius: 2rem; */
   }
 }
 
@@ -167,11 +167,11 @@ ul li input:checked + label {
   height: 0;
   background: transparent;
   border: 2px solid transparent;
-  border-radius: 2rem;
+  /* border-radius: 2rem; */
 }
 
 #reloading:hover::after {
-  border-radius: 2rem;
+  /* border-radius: 2rem; */
   animation: animates 1s linear forwards;
 }
 
@@ -183,7 +183,7 @@ ul li input:checked + label {
       border-right-color: transparent;
       border-bottom-color: transparent;
       border-left-color: #c7b0c3;
-      border-radius: 2rem;
+      /* border-radius: 2rem; */
   }
 
   50% {
@@ -193,7 +193,7 @@ ul li input:checked + label {
       border-right-color: transparent;
       border-bottom-color: #c7b0c3;
       border-left-color: #c7b0c3;
-      border-radius: 2rem;
+      /* border-radius: 2rem; */
   }
 
   100% {
@@ -203,7 +203,7 @@ ul li input:checked + label {
       border-right-color: transparent;
       border-bottom-color: #c7b0c3;
       border-left-color: #c7b0c3;
-      border-radius: 2rem;
+      /* border-radius: 2rem; */
   }
 }
 

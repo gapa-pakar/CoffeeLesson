@@ -215,6 +215,7 @@ let contentCheck;
 
 // makes sure that the elements will be added to the screen once
 let iconsCheck = 0;
+let page4Once = 0;
 let page5Once = 0;
 let page8Once = 0;
 let page9Once = 0;
@@ -285,6 +286,7 @@ window.addEventListener("load", () => {
     pageCount = 0;
     nextPageCount = 0;
     document.addEventListener("click", changePages);
+    screen.orientation.lock("portrait-primary");
 
     // book variables
     right = document.getElementsByClassName("right");
@@ -323,46 +325,50 @@ var page3 = () => {
 
 var page4 = () => {
     idArrayPage1 = ["9", "10", "11"];
-   
-    // adding the book elements to the screen
-    for (let i = 0; i < 3; i++) {
-        let div = document.createElement("div");
-        div.setAttribute("class", "right");
-        document.getElementById("container").appendChild(div);
-        let figureBack = document.createElement("figure");
-        figureBack.setAttribute("class", "back");
-        let div1 = document.createElement("div");
-        div1.setAttribute("id", `${backIdArray[i]}`);
-        figureBack.appendChild(div1);
-        let figureCover = document.createElement("figure");
-        figureCover.setAttribute("class", "front");
-        let div2 = document.createElement("div");
-        div2.setAttribute("id", `${coverIdArray[i]}`);
-        figureCover.appendChild(div2);
-        if (i === 0) {
-            figureBack.setAttribute("id", "back-cover");
-        } else if (i === 2) {
-            figureCover.setAttribute("id", "cover");
-            let h1 = document.createElement("h1");
-            h1.innerText = "כיצד מצאו את הקפה?";
-            let p = document.createElement("p");
-            p.innerText = "האגדה על הקפה";
-            let sheep = document.createElement("img");
-            sheep.setAttribute("src", "assets/media/historyPage/sheep.png");
-            sheep.setAttribute("class", "sheep");
-            let grass = document.createElement("img");
-            grass.setAttribute("src", "assets/media/historyPage/grass.png");
-            grass.setAttribute("class", "grass");
-            figureCover.append(h1, p);
-            figureBack.append(sheep, grass);
+
+    if (page4Once === 0) {
+        // adding the book elements to the screen
+        for (let i = 0; i < 3; i++) {
+            let div = document.createElement("div");
+            div.setAttribute("class", "right");
+            document.getElementById("container").appendChild(div);
+            let figureBack = document.createElement("figure");
+            figureBack.setAttribute("class", "back");
+            let div1 = document.createElement("div");
+            div1.setAttribute("id", `${backIdArray[i]}`);
+            figureBack.appendChild(div1);
+            let figureCover = document.createElement("figure");
+            figureCover.setAttribute("class", "front");
+            let div2 = document.createElement("div");
+            div2.setAttribute("id", `${coverIdArray[i]}`);
+            figureCover.appendChild(div2);
+            if (i === 0) {
+                figureBack.setAttribute("id", "back-cover");
+            } else if (i === 2) {
+                figureCover.setAttribute("id", "cover");
+                let h1 = document.createElement("h1");
+                h1.innerText = "כיצד מצאו את הקפה?";
+                let p = document.createElement("p");
+                p.innerText = "האגדה על הקפה";
+                let sheep = document.createElement("img");
+                sheep.setAttribute("src", "assets/media/historyPage/sheep.png");
+                sheep.setAttribute("class", "sheep");
+                let grass = document.createElement("img");
+                grass.setAttribute("src", "assets/media/historyPage/grass.png");
+                grass.setAttribute("class", "grass");
+                figureCover.append(h1, p);
+                figureBack.append(sheep, grass);
+            }
+            div.append(figureBack, figureCover);
         }
-        div.append(figureBack, figureCover);
+        
+        // adding the content
+        for (let i = 1; i <=3; i++) {
+            document.getElementById(`title${idArrayPage1[i - 1]}`).innerText = page4Content[i - 1];
+        }
+        page4Once = 1;
     }
     
-    // adding the content
-    for (let i = 1; i <=3; i++) {
-        document.getElementById(`title${idArrayPage1[i - 1]}`).innerText = page4Content[i - 1];
-    }
 }
 
 var page5 = () => {
@@ -637,6 +643,7 @@ var page8 = () => {
     idArrayPage1 = ["12", "14"];
     if (page8Once === 0) {
         addContent(page8Content);
+        page8Once = 1;
     }
     document.body.classList.remove("coffee-background");
     document.getElementById("page8").style.display = "block";
@@ -821,6 +828,16 @@ var page12 = () => {
     }
 }
 
+var finishPage = () => {
+    console.log("g")
+    document.getElementById("arrows").style.visibility = "hidden";
+    // document.getElementById("next-page-title").style.visibility = "hidden";
+    document.getElementById("finish-page").style.display = "block";
+    document.getElementById("start-button-again").addEventListener("click", () => {
+        location.reload();
+    })
+}
+
 // loads the quiz questions
 function loadQuiz(quizPage) {
     answerEls.forEach((answerEl) => (answerEl.checked = false));
@@ -946,8 +963,12 @@ let changePages = (event) => {
         } else if (event.target.id === "previous-page") {
             pageCount--;
         }
-        document.getElementById(`page${pageCount}`).style.display = "block";
-        window[`page${pageCount}`]();
+        if (pageCount <= 12) {
+            document.getElementById(`page${pageCount}`).style.display = "block";
+            window[`page${pageCount}`]();
+        } else {
+            finishPage();
+        }
     }
 }
 

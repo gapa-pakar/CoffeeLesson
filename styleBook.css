@@ -121,16 +121,19 @@
 }
 
 .front#cover h1 {
-    color: #fff;
+    color: #3b220e;
     font-size: 3.4rem;
     text-align: center;
     margin-top: 3.4rem;
+    font-family: Petel-Bold;
+    margin-top: 10rem;
 }
 
 .front#cover p {
-    color: rgba(0,0,0,0.8);
-    font-size: 1.4rem;
+    color: rgb(94, 56, 26);
+    font-size: 2rem;
     text-align: center;
+    font-family: Petel-Bold;
 }
 
 .buttons-container {
