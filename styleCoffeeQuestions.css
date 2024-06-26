@@ -87,7 +87,7 @@ ul li input:checked + label {
   color: var(--accent-color);
 }
 
-.submit {
+.submit, #reloading {
   color: var(--accent-color);
   background-color: transparent;
   font-family: inherit;
@@ -101,11 +101,113 @@ ul li input:checked + label {
   transition: 0.1s ease;
 }
 
-.submit:hover {
+.submit, #reloading:hover {
   transform: translateY(-3px);
 }
 
-.submit:active {
+/* #reloading:hover {
+  border: 2px solid #c7b0c3;
+} */
+
+#reloading::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 2rem;
+}
+
+#reloading:hover::before {
+  border-radius: 2rem;
+  animation: animate 1s linear forwards;
+}
+
+@keyframes animate {
+  0% {
+      width: 0;
+      height: 0;
+      border-top-color: #c7b0c3;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+      border-radius: 2rem;
+  }
+
+  50% {
+      width: 100%;
+      height: 0;
+      border-top-color: #c7b0c3;
+      border-right-color: #c7b0c3;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+      border-radius: 2rem;
+  }
+
+  100% {
+      width: 100%;
+      height: 100%;
+      border-top-color: #c7b0c3;
+      border-right-color: #c7b0c3;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+      border-radius: 2rem;
+  }
+}
+
+#reloading::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 2rem;
+}
+
+#reloading:hover::after {
+  border-radius: 2rem;
+  animation: animates 1s linear forwards;
+}
+
+@keyframes animates {
+  0% {
+      width: 0;
+      height: 0;
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: #c7b0c3;
+      border-radius: 2rem;
+  }
+
+  50% {
+      width: 0;
+      height: 100%;
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: #c7b0c3;
+      border-left-color: #c7b0c3;
+      border-radius: 2rem;
+  }
+
+  100% {
+      width: 100%;
+      height: 100%;
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: #c7b0c3;
+      border-left-color: #c7b0c3;
+      border-radius: 2rem;
+  }
+}
+
+.submit, #reloading:active {
   transform: translateY(2px);
 }
 

@@ -620,9 +620,9 @@ var quizQuestions = (quizPage) => {
                 document.getElementById("arrows").style.visibility = "visible";
                 quiz.innerHTML = `
                         <h2 class="question"> ענית נכון על  ${score}/${questions.length} שאלות</h2>
-                        <button id="realoding">Reload <i class="fa-solid fa-arrows-rotate"></i></button>
+                        <button id="reloading">רוצים שוב! <i class="fa-solid fa-arrows-rotate"></i></button>
                         `;
-                document.getElementById("realoding").addEventListener("click", () => {
+                document.getElementById("reloading").addEventListener("click", () => {
                     reloadQuiz = 1;
                     window[`page${pageCount}`]();
                 });
