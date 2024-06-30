@@ -287,7 +287,7 @@ window.addEventListener("load", () => {
     nextPageCount = 0;
     document.addEventListener("click", changePages);
     // screen.lockOrientation("orientation");
-    window.screen.orientation.lock("portrait");
+    screenOrientation.lock("portrait");
 
     // book variables
     right = document.getElementsByClassName("right");
