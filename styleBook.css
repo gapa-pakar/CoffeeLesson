@@ -83,16 +83,17 @@
 }
 
 .book-section > button {
-    border: 2px solid #ef9f00;
+    border: 2px solid #ee5079;
     background-color: transparent;
-    color: #ef9f00;
-    padding: 0.63rem 1.25rem;
+    color: #ee5079;
+    padding: 0.63rem 1;
     border-radius: 0.31rem;
     cursor: pointer;
     margin: 0.63rem;
     transition: 0.3s ease-in-out;
     position: absolute;
     top: 34rem;
+    font-family: Shuneet3-Bold-Regular;
 }
 
 .book-section > button:focus, .book-section > button:active{
@@ -106,11 +107,11 @@
 
 .book-section > p > a {
     text-decoration: none;
-    color: #ef9f00;
+    color: #ee5079;
 }
 
 .book-section > button:hover {
-    background-color: #ef9f00;
+    background-color: #ee5079;
     color: #fff;
 }
 

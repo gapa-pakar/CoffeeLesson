@@ -381,7 +381,7 @@ var page5 = () => {
             li.innerText = `${page5Content[i]}`;
             document.getElementById("sortlist").appendChild(li);
         }
-        // document.getElementById("arrows").style.visibility = "hidden";
+        document.getElementById("arrows").style.visibility = "hidden";
         page5Once = 1;
     }
     
